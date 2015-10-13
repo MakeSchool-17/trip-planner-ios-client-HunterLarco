@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GKX-ZW-Ona">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Planned Trips-->
+        <scene sceneID="4LW-xe-ZwD">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8nh-pe-fha" sceneMemberID="firstResponder"/>
+                <viewController id="6hE-ff-6Qm" customClass="ViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KF1-QH-yMa"/>
+                        <viewControllerLayoutGuide type="bottom" id="aNE-gF-xm5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rtQ-Sn-3Ba">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Planned Trips" id="4Ll-Wz-kjv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="oBr-fs-hwK">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="fFO-op-jGp" kind="presentation" id="iy6-EA-wMG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1656" y="644"/>
+        </scene>
+        <!--Add Trip-->
+        <scene sceneID="9jS-Fj-KNU">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wqv-tL-U3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="6Rj-aR-pit" customClass="AddTripView" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PTE-ga-A2I"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Aj-h9-h7y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pjJ-k9-f47">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Trip" id="YSq-lq-ULf">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zhP-tu-pw6">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cancelPressed:" destination="6Rj-aR-pit" id="KNp-CA-f2V"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="3311" y="644"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ihd-zh-64w">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1aU-VV-t94" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GKX-ZW-Ona" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ezo-rH-u5Y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.28837767549999999" green="0.58633517469999996" blue="0.73684210530000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6hE-ff-6Qm" kind="relationship" relationship="rootViewController" id="60T-JG-AoY"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="905" y="644"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="swd-ms-nhq">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gJc-w6-kfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fFO-op-jGp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="exb-TW-Sdm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.32184908196145812" green="0.69428891381063829" blue="0.6040749965587533" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6Rj-aR-pit" kind="relationship" relationship="rootViewController" id="cpi-4G-blG"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="2507" y="644"/>
+        </scene>
+    </scenes>
+</document>
