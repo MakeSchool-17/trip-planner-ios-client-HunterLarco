@@ -15,6 +15,7 @@
 		AE4E0F2D1BCDAEED002C1B5E /* TripPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4E0F2C1BCDAEED002C1B5E /* TripPlannerTests.swift */; };
 		AE4E0F381BCDAEED002C1B5E /* TripPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4E0F371BCDAEED002C1B5E /* TripPlannerUITests.swift */; };
 		AE4E0F461BCDAF44002C1B5E /* AddTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4E0F451BCDAF44002C1B5E /* AddTripView.swift */; settings = {ASSET_TAGS = (); }; };
+		AE4E0F491BCDE1B3002C1B5E /* LocalTrips.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE4E0F471BCDE1B3002C1B5E /* LocalTrips.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		AE4E0F371BCDAEED002C1B5E /* TripPlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPlannerUITests.swift; sourceTree = "<group>"; };
 		AE4E0F391BCDAEED002C1B5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE4E0F451BCDAF44002C1B5E /* AddTripView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTripView.swift; sourceTree = "<group>"; };
+		AE4E0F481BCDE1B3002C1B5E /* LocalTrips.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocalTrips.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				AE4E0F171BCDAEED002C1B5E /* AppDelegate.swift */,
+				AE4E0F471BCDE1B3002C1B5E /* LocalTrips.xcdatamodeld */,
 				AE4E0F191BCDAEED002C1B5E /* ViewController.swift */,
 				AE4E0F1B1BCDAEED002C1B5E /* Main.storyboard */,
 				AE4E0F1E1BCDAEED002C1B5E /* Assets.xcassets */,
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE4E0F491BCDE1B3002C1B5E /* LocalTrips.xcdatamodeld in Sources */,
 				AE4E0F1A1BCDAEED002C1B5E /* ViewController.swift in Sources */,
 				AE4E0F181BCDAEED002C1B5E /* AppDelegate.swift in Sources */,
 				AE4E0F461BCDAF44002C1B5E /* AddTripView.swift in Sources */,
@@ -404,7 +408,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TripPlanner/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.larcolabs.TripPlanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,7 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TripPlanner/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.larcolabs.TripPlanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -508,6 +512,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AE4E0F471BCDE1B3002C1B5E /* LocalTrips.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AE4E0F481BCDE1B3002C1B5E /* LocalTrips.xcdatamodel */,
+			);
+			currentVersion = AE4E0F481BCDE1B3002C1B5E /* LocalTrips.xcdatamodel */;
+			path = LocalTrips.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AE4E0F0C1BCDAEED002C1B5E /* Project object */;
 }

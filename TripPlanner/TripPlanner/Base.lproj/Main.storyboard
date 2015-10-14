@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Planned Trips-->
         <scene sceneID="4LW-xe-ZwD">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8nh-pe-fha" sceneMemberID="firstResponder"/>
-                <viewController id="6hE-ff-6Qm" customClass="ViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="6hE-ff-6Qm" customClass="ViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KF1-QH-yMa"/>
                         <viewControllerLayoutGuide type="bottom" id="aNE-gF-xm5"/>
@@ -17,7 +18,42 @@
                     <view key="view" contentMode="scaleToFill" id="rtQ-Sn-3Ba">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5yE-DP-z2E">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextCell" textLabel="a8f-2N-2V8" style="IBUITableViewCellStyleDefault" id="AfG-fi-0GC">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AfG-fi-0GC" id="Cfm-tO-wUo">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a8f-2N-2V8">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="6hE-ff-6Qm" id="BZ2-Pf-75O"/>
+                                    <outlet property="delegate" destination="6hE-ff-6Qm" id="WHd-uk-euN"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5yE-DP-z2E" secondAttribute="trailing" id="BGM-Ez-Uxo"/>
+                            <constraint firstItem="5yE-DP-z2E" firstAttribute="leading" secondItem="rtQ-Sn-3Ba" secondAttribute="leading" id="doo-7b-g67"/>
+                            <constraint firstItem="aNE-gF-xm5" firstAttribute="top" secondItem="5yE-DP-z2E" secondAttribute="bottom" id="oni-a4-dZD"/>
+                            <constraint firstItem="5yE-DP-z2E" firstAttribute="top" secondItem="KF1-QH-yMa" secondAttribute="bottom" id="x0W-Iy-wpE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Planned Trips" id="4Ll-Wz-kjv">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="oBr-fs-hwK">
@@ -27,6 +63,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="table" destination="5yE-DP-z2E" id="JKR-NF-qUn"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1656" y="644"/>
@@ -43,7 +82,31 @@
                     <view key="view" contentMode="scaleToFill" id="pjJ-k9-f47">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the name of your trip?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SfX-6c-EFE">
+                                <rect key="frame" x="20" y="84" width="230" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Awesome Trip Name Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="deU-Dc-9N9">
+                                <rect key="frame" x="20" y="124" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
+                                <connections>
+                                    <action selector="keyboardPressedGo:" destination="6Rj-aR-pit" eventType="editingDidEndOnExit" id="I7h-hN-6Pg"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="deU-Dc-9N9" secondAttribute="trailing" id="9uW-UA-jaX"/>
+                            <constraint firstItem="SfX-6c-EFE" firstAttribute="top" secondItem="PTE-ga-A2I" secondAttribute="bottom" constant="20" id="DOG-Ub-ZjS"/>
+                            <constraint firstItem="deU-Dc-9N9" firstAttribute="leading" secondItem="pjJ-k9-f47" secondAttribute="leadingMargin" id="JUa-GJ-t0v"/>
+                            <constraint firstItem="SfX-6c-EFE" firstAttribute="leading" secondItem="pjJ-k9-f47" secondAttribute="leading" constant="20" id="bUB-R8-5jf"/>
+                            <constraint firstItem="deU-Dc-9N9" firstAttribute="top" secondItem="SfX-6c-EFE" secondAttribute="bottom" constant="20" id="bis-R3-Txo"/>
+                            <constraint firstItem="deU-Dc-9N9" firstAttribute="centerX" secondItem="pjJ-k9-f47" secondAttribute="centerX" id="fQC-vp-uXH"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Trip" id="YSq-lq-ULf">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zhP-tu-pw6">
@@ -52,7 +115,16 @@
                                 <action selector="cancelPressed:" destination="6Rj-aR-pit" id="KNp-CA-f2V"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="lbU-Yx-gM1">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="addPressed:" destination="6Rj-aR-pit" id="WXf-qU-hpv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="input" destination="deU-Dc-9N9" id="Ibr-QY-ZVK"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="3311" y="644"/>
@@ -78,7 +150,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="905" y="644"/>
+            <point key="canvasLocation" x="765" y="644"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="swd-ms-nhq">
