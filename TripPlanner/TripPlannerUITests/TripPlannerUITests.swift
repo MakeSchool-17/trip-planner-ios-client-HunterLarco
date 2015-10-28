@@ -2,7 +2,7 @@
 //  TripPlannerUITests.swift
 //  TripPlannerUITests
 //
-//  Created by Hunter on 10/13/15.
+//  Created by Hunter on 10/27/15.
 //  Copyright © 2015 larcolabs. All rights reserved.
 //
 
