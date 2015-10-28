@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TripView" customModule="TripPlanner" customModuleProvider="target">
+            <connections>
+                <outlet property="label1" destination="BaR-1b-y19" id="7uk-1Y-toH"/>
+                <outlet property="label2" destination="vQq-hN-6tW" id="HHt-d7-oc5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="693" height="305"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaR-1b-y19">
+                    <rect key="frame" x="325" y="92" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQq-hN-6tW">
+                    <rect key="frame" x="325" y="142" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zS-MY-44q">
+                    <rect key="frame" x="325" y="189" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FkC-e8-hmh">
+                    <rect key="frame" x="325" y="210.5" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="submitFormButtonTapped:" destination="-1" eventType="touchUpInside" id="RSG-Zy-fdW"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="5zS-MY-44q" firstAttribute="top" secondItem="vQq-hN-6tW" secondAttribute="bottom" constant="26" id="43v-y6-sJO"/>
+                <constraint firstItem="vQq-hN-6tW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7AT-yl-jAA"/>
+                <constraint firstItem="vQq-hN-6tW" firstAttribute="top" secondItem="BaR-1b-y19" secondAttribute="bottom" constant="29.5" id="Rfd-yc-sIo"/>
+                <constraint firstItem="vQq-hN-6tW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Ucg-YN-b0T"/>
+                <constraint firstItem="FkC-e8-hmh" firstAttribute="top" secondItem="5zS-MY-44q" secondAttribute="bottom" constant="1" id="VX8-e2-SEY"/>
+                <constraint firstItem="BaR-1b-y19" firstAttribute="leading" secondItem="vQq-hN-6tW" secondAttribute="leading" id="Wij-Ag-IOu"/>
+                <constraint firstItem="5zS-MY-44q" firstAttribute="leading" secondItem="vQq-hN-6tW" secondAttribute="leading" id="byM-W9-VBG"/>
+                <constraint firstItem="FkC-e8-hmh" firstAttribute="leading" secondItem="5zS-MY-44q" secondAttribute="leading" id="vRK-RG-S6G"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="402.5" y="228.5"/>
+        </view>
+    </objects>
+</document>
