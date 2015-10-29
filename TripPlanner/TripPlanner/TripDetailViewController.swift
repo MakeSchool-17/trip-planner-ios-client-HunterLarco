@@ -10,7 +10,7 @@ import UIKit
 
 class TripDetailViewController: UIViewController {
     
-    @IBOutlet weak var tripForm: TripView!
+    @IBOutlet weak var tripForm: AddTripView!
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -22,9 +22,13 @@ class TripDetailViewController: UIViewController {
 
 extension TripDetailViewController: TripViewDelegate {
     
-    func formSubmitted(tripView: TripView, text: String) {
-        let result = 2 === 2
-        print(result)
+    func formSubmitted(tripView: AddTripView, text: String) {
+        print(text)
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func formCanceled(){
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
 }
