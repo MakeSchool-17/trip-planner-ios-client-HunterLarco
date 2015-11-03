@@ -26,4 +26,10 @@ class BasicAuthString {
         return "Basic \(base64EncodedCredential)"
     }
     
+    func formHeader() -> Dictionary<String, String> {
+        var headers = Dictionary<String, String>()
+        headers["Authorization"] = getAuthString()
+        return headers
+    }
+    
 }

@@ -23,36 +23,28 @@ class TripDetailViewController: UIViewController {
 extension TripDetailViewController: TripViewDelegate {
     
     func formSubmitted(tripView: AddTripView, text: String) {
-        var body = Dictionary<String, String>()
-        body["name"] = "My iOS Trip"
-        body["author"] = "testauthor"
+        let authToken = BasicAuthString(username: "jane@doe.com", password: "secrestpassword")
+        let user = UserModel(basicAuth: authToken)
         
-        var headers = Dictionary<String, String>()
-        headers["Authorization"] = BasicAuthString(username: "jane@doe.com", password: "secretpassword").getAuthString()
-        
-        RequestHelper.post(self, url: "http://localhost:8080/trips/", body:body, headers:headers)
+        user.getTrips(onTripsResponse, onJSONParsingError: onJSONParsingError, onResponseFailure: onTripsFailure)
         
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func onTripsResponse(json: NSDictionary) {
+        print("trips recieved")
+    }
+    
+    func onJSONParsingError(jsonStr: String?) {
+        print("json parsing error: \(jsonStr)")
+    }
+    
+    func onTripsFailure(code: Int) {
+        print("grab trips error")
     }
     
     func formCanceled(){
         dismissViewControllerAnimated(true, completion: nil)
     }
 
-}
-
-extension TripDetailViewController: RequestHelperResponseParser {
-    
-    func onJSONParsingError(jsonStr: String?){
-        print("Server replied with invalid JSON '\(jsonStr)'")
-    }
-    func onResponseFailure(code: Int) {
-        print("failure")
-        print(code)
-    }
-    func onResponseSuccess(json: NSDictionary) {
-        print("success")
-        print(json)
-    }
-    
 }

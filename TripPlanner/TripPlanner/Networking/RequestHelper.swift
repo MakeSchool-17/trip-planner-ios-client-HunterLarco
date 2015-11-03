@@ -11,15 +11,52 @@ import Foundation
 
 class RequestHelper {
     
-    class func get(callback: RequestHelperResponseParser, url: String, headers: Dictionary<String, String>?){
-        return globalRequest(callback, method: "GET", url: url, body: nil, headers: headers)
+    class func get(
+        onResponseSuccess: (json: NSDictionary) -> (),
+        onJSONParsingError: (jsonStr: String?) -> (),
+        onResponseFailure: (code: Int) -> (),
+        url: String,
+        headers: Dictionary<String, String>?
+    ){
+        return globalRequest(
+            onResponseSuccess,
+            onJSONParsingError: onJSONParsingError,
+            onResponseFailure: onResponseFailure,
+            method: "GET",
+            url: url,
+            body: nil,
+            headers: headers
+        )
     }
     
-    class func post(callback: RequestHelperResponseParser, url: String, body: Dictionary<String, String>?, headers: Dictionary<String, String>?){
-        return globalRequest(callback, method: "POST", url: url, body: body, headers: headers)
+    class func post(
+        onResponseSuccess: (json: NSDictionary) -> (),
+        onJSONParsingError: (jsonStr: String?) -> (),
+        onResponseFailure: (code: Int) -> (),
+        url: String,
+        body: Dictionary<String, String>?,
+        headers: Dictionary<String, String>?
+    ){
+        return globalRequest(
+            onResponseSuccess,
+            onJSONParsingError: onJSONParsingError,
+            onResponseFailure: onResponseFailure,
+            method: "POST",
+            url: url,
+            body: body,
+            headers: headers
+        )
     }
     
-    private class func globalRequest(callback: RequestHelperResponseParser, method: String, url: String, var body: Dictionary<String, String>?, headers: Dictionary<String, String>?){
+    private class func globalRequest(
+        onResponseSuccess: (json: NSDictionary) -> (),
+        onJSONParsingError: (jsonStr: String?) -> (),
+        onResponseFailure: (code: Int) -> (),
+        method: String,
+        url: String,
+        var body: Dictionary<String, String>?,
+        headers: Dictionary<String, String>?
+    ){
         
         let request = NSMutableURLRequest(URL: NSURL(string: url)!)
         
@@ -35,9 +72,7 @@ class RequestHelper {
         }
         
         if method != "GET" {
-            if body == nil {
-                body = Dictionary<String, String>()
-            }
+            if body == nil { body = Dictionary<String, String>() }
             request.HTTPBody = try! NSJSONSerialization.dataWithJSONObject(body!, options: [])
         }
         
@@ -51,31 +86,22 @@ class RequestHelper {
                 if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
                     let status = (response as! NSHTTPURLResponse).statusCode
                     if status == 200 {
-                        callback.onResponseSuccess(json)
+                        onResponseSuccess(json: json)
                     }else{
-                        callback.onResponseFailure(status)
+                        onResponseFailure(code: status)
                     }
                 } else {
                     // No error thrown, but not NSDictionary
                     let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding) as? String
-                    callback.onJSONParsingError(jsonStr)
+                    onJSONParsingError(jsonStr: jsonStr)
                 }
             } catch {
                 let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding) as? String
-                callback.onJSONParsingError(jsonStr)
+                onJSONParsingError(jsonStr: jsonStr)
             }
         }
         
         task.resume()
     }
-    
-}
-
-
-protocol RequestHelperResponseParser {
-    
-    func onJSONParsingError(jsonStr: String?)
-    func onResponseFailure(code: Int)
-    func onResponseSuccess(json: NSDictionary)
     
 }
