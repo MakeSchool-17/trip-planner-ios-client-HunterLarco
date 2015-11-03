@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE4659CA1BE814BE007B2929 /* RequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4659C91BE814BE007B2929 /* RequestHelper.swift */; };
+		AE0AB4931BE94CA1001EDD2B /* RequestErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AB4921BE94CA1001EDD2B /* RequestErrorManager.swift */; };
+		AE4659CA1BE814BE007B2929 /* BasicRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4659C91BE814BE007B2929 /* BasicRequestManager.swift */; };
 		AE4659CD1BE82F7E007B2929 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4659CC1BE82F7E007B2929 /* UserModel.swift */; };
 		AE4659CF1BE82F89007B2929 /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4659CE1BE82F89007B2929 /* TripModel.swift */; };
 		AE4659D11BE8336F007B2929 /* BasicAuthString.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4659D01BE8336F007B2929 /* BasicAuthString.swift */; };
-		AE7383941BE13EE200DD30AA /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7383931BE13EE200DD30AA /* TripDetailViewController.swift */; };
+		AE4659DA1BE93AA2007B2929 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4659D91BE93AA2007B2929 /* LoginViewController.swift */; };
+		AE7383941BE13EE200DD30AA /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7383931BE13EE200DD30AA /* AddTripViewController.swift */; };
 		AE7BD9781BE0966A001B005D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BD9771BE0966A001B005D /* AppDelegate.swift */; };
 		AE7BD97D1BE0966A001B005D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7BD97B1BE0966A001B005D /* Main.storyboard */; };
 		AE7BD9801BE0966A001B005D /* TripPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE7BD97E1BE0966A001B005D /* TripPlanner.xcdatamodeld */; };
@@ -45,11 +47,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AE4659C91BE814BE007B2929 /* RequestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHelper.swift; sourceTree = "<group>"; };
+		AE0AB4921BE94CA1001EDD2B /* RequestErrorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestErrorManager.swift; sourceTree = "<group>"; };
+		AE4659C91BE814BE007B2929 /* BasicRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicRequestManager.swift; sourceTree = "<group>"; };
 		AE4659CC1BE82F7E007B2929 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		AE4659CE1BE82F89007B2929 /* TripModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
 		AE4659D01BE8336F007B2929 /* BasicAuthString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicAuthString.swift; sourceTree = "<group>"; };
-		AE7383931BE13EE200DD30AA /* TripDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TripDetailViewController.swift; path = ../TripDetailViewController.swift; sourceTree = "<group>"; };
+		AE4659D91BE93AA2007B2929 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AE7383931BE13EE200DD30AA /* AddTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddTripViewController.swift; path = ../AddTripViewController.swift; sourceTree = "<group>"; };
 		AE7BD9741BE0966A001B005D /* TripPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE7BD9771BE0966A001B005D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE7BD97C1BE0966A001B005D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,8 +103,9 @@
 		AE4659C81BE814A1007B2929 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				AE4659C91BE814BE007B2929 /* RequestHelper.swift */,
+				AE4659C91BE814BE007B2929 /* BasicRequestManager.swift */,
 				AE4659D01BE8336F007B2929 /* BasicAuthString.swift */,
+				AE0AB4921BE94CA1001EDD2B /* RequestErrorManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -117,7 +122,8 @@
 		AE7383951BE1495500DD30AA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AE7383931BE13EE200DD30AA /* TripDetailViewController.swift */,
+				AE7383931BE13EE200DD30AA /* AddTripViewController.swift */,
+				AE4659D91BE93AA2007B2929 /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -334,16 +340,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE0AB4931BE94CA1001EDD2B /* RequestErrorManager.swift in Sources */,
 				AE4659D11BE8336F007B2929 /* BasicAuthString.swift in Sources */,
 				AE878DFE1BE2B3E40004882F /* TripsView.swift in Sources */,
-				AE4659CA1BE814BE007B2929 /* RequestHelper.swift in Sources */,
+				AE4659CA1BE814BE007B2929 /* BasicRequestManager.swift in Sources */,
 				AE4659CF1BE82F89007B2929 /* TripModel.swift in Sources */,
 				AE4659CD1BE82F7E007B2929 /* UserModel.swift in Sources */,
 				AED5D3CB1BE41156000C8130 /* TripsViewTableCell.swift in Sources */,
-				AE7383941BE13EE200DD30AA /* TripDetailViewController.swift in Sources */,
+				AE7383941BE13EE200DD30AA /* AddTripViewController.swift in Sources */,
 				AE7BD9801BE0966A001B005D /* TripPlanner.xcdatamodeld in Sources */,
 				AE7BD9781BE0966A001B005D /* AppDelegate.swift in Sources */,
 				AE878DFA1BE2B2A30004882F /* AddTripView.swift in Sources */,
+				AE4659DA1BE93AA2007B2929 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

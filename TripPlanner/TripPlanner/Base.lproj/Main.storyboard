@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vxK-4V-OPC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="efL-Zh-0Di">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Planned Trips-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TripPlanner" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHj-ee-w0n" customClass="TripsView" customModule="TripPlanner" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHj-ee-w0n" customClass="TripsView" customModule="TripPlanner">
                                 <rect key="frame" x="0.0" y="5" width="375" height="657"/>
                             </view>
                         </subviews>
@@ -43,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="717.5" y="389.5"/>
         </scene>
-        <!--Trip Detail View Controller-->
+        <!--Add Trip View Controller-->
         <scene sceneID="4K6-jV-FP6">
             <objects>
-                <viewController id="Iyh-YW-Vqn" customClass="TripDetailViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Iyh-YW-Vqn" customClass="AddTripViewController" customModule="TripPlanner" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ogo-DG-QAH"/>
                         <viewControllerLayoutGuide type="bottom" id="rc9-oM-GnU"/>
@@ -55,7 +56,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEa-Yh-1yC" customClass="AddTripView" customModule="TripPlanner" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEa-Yh-1yC" customClass="AddTripView" customModule="TripPlanner">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </view>
                         </subviews>
@@ -99,5 +100,111 @@
             </objects>
             <point key="canvasLocation" x="263" y="390"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="F4F-Gh-c9G">
+            <objects>
+                <viewController id="efL-Zh-0Di" customClass="LoginViewController" customModule="TripPlanner" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z27-WD-ZqT"/>
+                        <viewControllerLayoutGuide type="bottom" id="JPC-wj-7U4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qPE-9T-bGP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day" translatesAutoresizingMaskIntoConstraints="NO" id="oJt-zG-eII">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yAG-nL-Yuf" userLabel="Form Centering Frame">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oo-D2-WUq">
+                                        <rect key="frame" x="38" y="351" width="150" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="Log In">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginButtonPressed:" destination="efL-Zh-0Di" eventType="touchUpInside" id="FjU-Br-gqP"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qbX-pE-RgQ">
+                                        <rect key="frame" x="38" y="259" width="299" height="38"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="35K-MY-Q0m"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                        <connections>
+                                            <action selector="emailFieldNextButtonPressed:" destination="efL-Zh-0Di" eventType="editingDidEndOnExit" id="YHL-XQ-IDP"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mc7-49-SEx">
+                                        <rect key="frame" x="38" y="305" width="299" height="38"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="GMy-fS-vY2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ina-JX-T9R">
+                                        <rect key="frame" x="187" y="351" width="150" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signupButtonPressed:" destination="efL-Zh-0Di" eventType="touchUpInside" id="iKG-S5-uuD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Mc7-49-SEx" firstAttribute="centerY" secondItem="yAG-nL-Yuf" secondAttribute="centerY" id="1Ny-Jr-Vrp"/>
+                                    <constraint firstItem="4oo-D2-WUq" firstAttribute="width" secondItem="Mc7-49-SEx" secondAttribute="width" multiplier="1:2" id="2N8-dg-Fbh"/>
+                                    <constraint firstItem="qbX-pE-RgQ" firstAttribute="leading" secondItem="Mc7-49-SEx" secondAttribute="leading" id="3rH-5G-CZ3"/>
+                                    <constraint firstItem="ina-JX-T9R" firstAttribute="width" secondItem="Mc7-49-SEx" secondAttribute="width" multiplier="1:2" id="6dr-kC-Qvv"/>
+                                    <constraint firstItem="qbX-pE-RgQ" firstAttribute="trailing" secondItem="Mc7-49-SEx" secondAttribute="trailing" id="EOg-sk-MZX"/>
+                                    <constraint firstItem="4oo-D2-WUq" firstAttribute="leading" secondItem="Mc7-49-SEx" secondAttribute="leading" id="Zy9-gM-aXO"/>
+                                    <constraint firstItem="ina-JX-T9R" firstAttribute="trailing" secondItem="Mc7-49-SEx" secondAttribute="trailing" id="e4R-f9-QAS"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mc7-49-SEx" secondAttribute="trailing" constant="38" id="ldr-Gr-6yW"/>
+                                    <constraint firstItem="ina-JX-T9R" firstAttribute="top" secondItem="Mc7-49-SEx" secondAttribute="bottom" constant="8" id="lrH-Re-c4X"/>
+                                    <constraint firstItem="Mc7-49-SEx" firstAttribute="leading" secondItem="yAG-nL-Yuf" secondAttribute="leading" constant="38" id="nni-gH-Y9O"/>
+                                    <constraint firstItem="Mc7-49-SEx" firstAttribute="top" secondItem="qbX-pE-RgQ" secondAttribute="bottom" constant="8" id="qfD-q5-Qbq"/>
+                                    <constraint firstItem="4oo-D2-WUq" firstAttribute="top" secondItem="Mc7-49-SEx" secondAttribute="bottom" constant="8" id="sJG-w3-fii"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="oJt-zG-eII" secondAttribute="trailing" id="7y8-xf-ePN"/>
+                            <constraint firstItem="oJt-zG-eII" firstAttribute="leading" secondItem="qPE-9T-bGP" secondAttribute="leading" id="BOE-ff-0T9"/>
+                            <constraint firstItem="yAG-nL-Yuf" firstAttribute="leading" secondItem="qPE-9T-bGP" secondAttribute="leading" id="FbG-K8-WPb"/>
+                            <constraint firstItem="yAG-nL-Yuf" firstAttribute="top" secondItem="Z27-WD-ZqT" secondAttribute="bottom" id="QUM-ER-nZD"/>
+                            <constraint firstItem="JPC-wj-7U4" firstAttribute="top" secondItem="oJt-zG-eII" secondAttribute="bottom" id="Rlb-eq-jhS"/>
+                            <constraint firstItem="JPC-wj-7U4" firstAttribute="top" secondItem="yAG-nL-Yuf" secondAttribute="bottom" id="W6s-zS-DWX"/>
+                            <constraint firstItem="oJt-zG-eII" firstAttribute="height" secondItem="qPE-9T-bGP" secondAttribute="height" id="ZGn-Wu-N9Q"/>
+                            <constraint firstAttribute="trailing" secondItem="yAG-nL-Yuf" secondAttribute="trailing" id="wRt-cb-ZtR"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="centeringFrameBottomConstrain" destination="W6s-zS-DWX" id="PRM-kw-gfX"/>
+                        <outlet property="emailField" destination="qbX-pE-RgQ" id="Omj-er-JPe"/>
+                        <outlet property="imageBottomConstraint" destination="Rlb-eq-jhS" id="ABK-Kj-FEi"/>
+                        <outlet property="loginButton" destination="4oo-D2-WUq" id="bR2-CU-X1L"/>
+                        <outlet property="passwordField" destination="Mc7-49-SEx" id="TIg-Hw-EgJ"/>
+                        <outlet property="signupButton" destination="ina-JX-T9R" id="pHy-ct-EsI"/>
+                        <segue destination="vxK-4V-OPC" kind="show" identifier="transitionFromLogin" id="0M7-LZ-MzA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Elx-y5-8EU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-226.5" y="389.5"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="day" width="1500" height="2550"/>
+    </resources>
 </document>

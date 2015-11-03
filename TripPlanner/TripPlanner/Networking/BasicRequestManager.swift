@@ -9,12 +9,12 @@
 import Foundation
 
 
-class RequestHelper {
+class BasicRequestManager {
     
     class func get(
-        onResponseSuccess: (json: NSDictionary) -> (),
-        onJSONParsingError: (jsonStr: String?) -> (),
-        onResponseFailure: (code: Int) -> (),
+        onResponseSuccess: (json: NSDictionary) -> Void,
+        onJSONParsingError: (jsonStr: String?) -> Void,
+        onResponseFailure: (code: Int) -> Void,
         url: String,
         headers: Dictionary<String, String>?
     ){
@@ -30,9 +30,9 @@ class RequestHelper {
     }
     
     class func post(
-        onResponseSuccess: (json: NSDictionary) -> (),
-        onJSONParsingError: (jsonStr: String?) -> (),
-        onResponseFailure: (code: Int) -> (),
+        onResponseSuccess: (json: NSDictionary) -> Void,
+        onJSONParsingError: (jsonStr: String?) -> Void,
+        onResponseFailure: (code: Int) -> Void,
         url: String,
         body: Dictionary<String, String>?,
         headers: Dictionary<String, String>?
@@ -49,9 +49,9 @@ class RequestHelper {
     }
     
     private class func globalRequest(
-        onResponseSuccess: (json: NSDictionary) -> (),
-        onJSONParsingError: (jsonStr: String?) -> (),
-        onResponseFailure: (code: Int) -> (),
+        onResponseSuccess: (json: NSDictionary) -> Void,
+        onJSONParsingError: (jsonStr: String?) -> Void,
+        onResponseFailure: (code: Int) -> Void,
         method: String,
         url: String,
         var body: Dictionary<String, String>?,
