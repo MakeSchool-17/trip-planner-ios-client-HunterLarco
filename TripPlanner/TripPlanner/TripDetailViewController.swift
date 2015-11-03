@@ -23,7 +23,15 @@ class TripDetailViewController: UIViewController {
 extension TripDetailViewController: TripViewDelegate {
     
     func formSubmitted(tripView: AddTripView, text: String) {
-        print(text)
+        var body = Dictionary<String, String>()
+        body["name"] = "My iOS Trip"
+        body["author"] = "testauthor"
+        
+        var headers = Dictionary<String, String>()
+        headers["Authorization"] = BasicAuthString(username: "jane@doe.com", password: "secretpassword").getAuthString()
+        
+        RequestHelper.post(self, url: "http://localhost:8080/trips/", body:body, headers:headers)
+        
         dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -31,4 +39,20 @@ extension TripDetailViewController: TripViewDelegate {
         dismissViewControllerAnimated(true, completion: nil)
     }
 
+}
+
+extension TripDetailViewController: RequestHelperResponseParser {
+    
+    func onJSONParsingError(jsonStr: String?){
+        print("Server replied with invalid JSON '\(jsonStr)'")
+    }
+    func onResponseFailure(code: Int) {
+        print("failure")
+        print(code)
+    }
+    func onResponseSuccess(json: NSDictionary) {
+        print("success")
+        print(json)
+    }
+    
 }

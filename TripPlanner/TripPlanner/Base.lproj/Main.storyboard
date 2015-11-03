@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vxK-4V-OPC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vxK-4V-OPC">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--Planned Trips-->
@@ -17,17 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHj-ee-w0n">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHj-ee-w0n" customClass="TripsView" customModule="TripPlanner" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="5" width="375" height="657"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="tHj-ee-w0n" secondAttribute="trailing" id="44r-fA-g9j"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tHj-ee-w0n" secondAttribute="bottom" id="gUR-nu-e5k"/>
-                            <constraint firstItem="tHj-ee-w0n" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="jLb-4D-aRp"/>
-                            <constraint firstItem="tHj-ee-w0n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ue1-Cw-6tR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tHj-ee-w0n" secondAttribute="bottom" constant="5" id="FaZ-Xg-TIu"/>
+                            <constraint firstItem="tHj-ee-w0n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XsG-3S-JJv"/>
+                            <constraint firstAttribute="trailing" secondItem="tHj-ee-w0n" secondAttribute="trailing" id="wMP-tw-JKS"/>
+                            <constraint firstItem="tHj-ee-w0n" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="5" id="we4-uO-eEn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Planned Trips" id="sJe-ow-BLk">
@@ -86,7 +85,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BLo-Uh-nBc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.28837767549999999" green="0.58633517469999996" blue="0.73684210530000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.32184908200000001" green="0.69428891380000002" blue="0.60407499659999997" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                         </textAttributes>

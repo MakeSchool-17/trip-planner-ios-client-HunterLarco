@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TripView" customModule="TripPlanner" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTripView" customModule="TripPlanner" customModuleProvider="target">
             <connections>
                 <outlet property="bottomConstraint" destination="fzP-2k-pW8" id="bnB-FW-0s2"/>
                 <outlet property="centeredViewConstraint" destination="gwX-80-p9J" id="Qu9-B0-TD8"/>
@@ -56,11 +58,11 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k7y-19-jNt">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k7y-19-jNt" userLabel="Centering Frame">
                     <rect key="frame" x="0.0" y="64" width="375" height="270"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HgX-ff-t04">
-                            <rect key="frame" x="0.0" y="106" width="375" height="60"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HgX-ff-t04" userLabel="Text View">
+                            <rect key="frame" x="0.0" y="105" width="375" height="60"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHERE WILL YOUR NEXT TRIP TAKE YOU?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Daq-2X-di1">
                                     <rect key="frame" x="60" y="7" width="256" height="15"/>
@@ -104,12 +106,18 @@
                 <constraint firstItem="rdo-zX-Es2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Rhm-Qp-HBQ"/>
                 <constraint firstAttribute="trailing" secondItem="mRn-dH-JQ8" secondAttribute="trailing" id="ZnA-tQ-ZwA"/>
                 <constraint firstAttribute="bottom" secondItem="rdo-zX-Es2" secondAttribute="bottom" id="fzP-2k-pW8"/>
-                <constraint firstItem="rdo-zX-Es2" firstAttribute="bottom" secondItem="k7y-19-jNt" secondAttribute="bottom" constant="333" id="gwX-80-p9J"/>
+                <constraint firstItem="rdo-zX-Es2" firstAttribute="centerY" secondItem="k7y-19-jNt" secondAttribute="bottom" id="gwX-80-p9J"/>
                 <constraint firstItem="k7y-19-jNt" firstAttribute="top" secondItem="mRn-dH-JQ8" secondAttribute="bottom" id="him-lo-rKR"/>
                 <constraint firstItem="k7y-19-jNt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mSC-1W-6C1"/>
                 <constraint firstItem="mRn-dH-JQ8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="o5W-41-jtN"/>
+                <constraint firstItem="k7y-19-jNt" firstAttribute="height" secondItem="rdo-zX-Es2" secondAttribute="height" multiplier="1:2" id="zZg-Gm-rav"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="zZg-Gm-rav"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="406.5" y="228.5"/>
         </view>
     </objects>
