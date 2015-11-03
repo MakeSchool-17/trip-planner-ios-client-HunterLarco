@@ -27,16 +27,25 @@ class LoginViewController: UIViewController {
         })
     }
     
+    private func showAlert(message: String, title: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        
+        dispatch_async(dispatch_get_main_queue(),{
+            self.presentViewController(alertController, animated: true, completion: nil)
+        })
+    }
+    
     func onUnknownError() {
-        print("Unknown Error")
+        showAlert("Oh No! We're sorry, an unknown error occured. Please try whatever you were doing again.", title: "Unknown Error")
     }
     
     func onEmailTaken() {
-        print("Email Taken")
+        showAlert("Looks like that email is already taken.", title: "Email Taken")
     }
     
     func onInvalidCredentials() {
-        print("Invalid Credentials")
+        showAlert("Your email and password combination doesn't correspond to any known users. Woops.", title: "Invalid Credentials")
     }
 
 }
