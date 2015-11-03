@@ -37,14 +37,17 @@ class LoginViewController: UIViewController {
     }
     
     func onUnknownError() {
+        loginForm.unlockForm()
         showAlert("Oh No! We're sorry, an unknown error occured. Please try whatever you were doing again.", title: "Unknown Error")
     }
     
     func onEmailTaken() {
+        loginForm.unlockForm()
         showAlert("Looks like that email is already taken.", title: "Email Taken")
     }
     
     func onInvalidCredentials() {
+        loginForm.unlockForm()
         showAlert("Your email and password combination doesn't correspond to any known users. Woops.", title: "Invalid Credentials")
     }
 
@@ -53,10 +56,12 @@ class LoginViewController: UIViewController {
 extension LoginViewController: LoginViewDelegate {
     
     func doLogin(email: String, password: String) {
+        loginForm.lockForm()
         UserModel.login(onLoginSignupSuccess, onInvalidCredentials: onInvalidCredentials, onUnknownError: onUnknownError, email: email, password: password)
     }
     
     func doSignup(email: String, password: String) {
+        loginForm.lockForm()
         UserModel.create(onLoginSignupSuccess, onEmailTaken: onEmailTaken, onUnknownError: onUnknownError, email: email, password: password)
     }
     

@@ -15,6 +15,8 @@ class LoginView: UIView {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signupButton: UIButton!
     
     var view: UIView!
     
@@ -113,6 +115,20 @@ class LoginView: UIView {
     
     @IBAction func signupButtonPressed(sender: AnyObject) {
         delegate?.doSignup(emailField.text!, password: passwordField.text!)
+    }
+    
+    func lockForm() {
+        emailField.enabled = false
+        passwordField.enabled = false
+        loginButton.enabled = false
+        signupButton.enabled = false
+    }
+    
+    func unlockForm() {
+        emailField.enabled = true
+        passwordField.enabled = true
+        loginButton.enabled = true
+        signupButton.enabled = true
     }
     
 }
