@@ -20,8 +20,6 @@ class LoginViewController: UIViewController {
     }
     
     func onLoginSignupSuccess(user: UserModel) {
-        print(user)
-        
         dispatch_async(dispatch_get_main_queue(),{
             self.performSegueWithIdentifier("transitionFromLogin", sender: self)
         })

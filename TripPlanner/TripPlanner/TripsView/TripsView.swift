@@ -11,6 +11,8 @@ import UIKit
 
 class TripsView: UIView {
     
+    var delegate: TripsViewDelegate?
+    
     var view: UIView!
     
     @IBOutlet weak var tableView: UITableView!
@@ -89,5 +91,16 @@ extension TripsView: UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print(indexPath)
+        delegate?.doViewTrip(TripModel())
+    }
+    
+}
+
+protocol TripsViewDelegate {
+    
+    func doViewTrip(trip: TripModel)
     
 }

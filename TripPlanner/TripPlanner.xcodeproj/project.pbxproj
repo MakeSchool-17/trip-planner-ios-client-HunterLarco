@@ -28,9 +28,10 @@
 		AE878DFE1BE2B3E40004882F /* TripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE878DFD1BE2B3E40004882F /* TripsView.swift */; };
 		AE878E001BE2B4170004882F /* TripsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE878DFF1BE2B4170004882F /* TripsView.xib */; };
 		AE8ECB901BE2E4120074798D /* TripsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE8ECB8F1BE2E4120074798D /* TripsTableViewCell.xib */; };
-		AED5D3CB1BE41156000C8130 /* TripsViewTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED5D3CA1BE41156000C8130 /* TripsViewTableCell.swift */; };
+		AED5D3CB1BE41156000C8130 /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED5D3CA1BE41156000C8130 /* TripsTableViewCell.swift */; };
 		AEE892641BE9733500C65FD2 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE892631BE9733500C65FD2 /* DBManager.swift */; };
 		AEE892661BE98D3300C65FD2 /* ManagedUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE892651BE98D3300C65FD2 /* ManagedUserModel.swift */; };
+		AEE892681BEAA10000C65FD2 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE892671BEAA10000C65FD2 /* TripsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,9 +79,10 @@
 		AE878DFD1BE2B3E40004882F /* TripsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsView.swift; sourceTree = "<group>"; };
 		AE878DFF1BE2B4170004882F /* TripsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TripsView.xib; sourceTree = "<group>"; };
 		AE8ECB8F1BE2E4120074798D /* TripsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TripsTableViewCell.xib; sourceTree = "<group>"; };
-		AED5D3CA1BE41156000C8130 /* TripsViewTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsViewTableCell.swift; sourceTree = "<group>"; };
+		AED5D3CA1BE41156000C8130 /* TripsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
 		AEE892631BE9733500C65FD2 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		AEE892651BE98D3300C65FD2 /* ManagedUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedUserModel.swift; sourceTree = "<group>"; };
+		AEE892671BEAA10000C65FD2 /* TripsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			children = (
 				AE7383931BE13EE200DD30AA /* AddTripViewController.swift */,
 				AE4659D91BE93AA2007B2929 /* LoginViewController.swift */,
+				AEE892671BEAA10000C65FD2 /* TripsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -219,7 +222,7 @@
 				AE878DFD1BE2B3E40004882F /* TripsView.swift */,
 				AE878DFF1BE2B4170004882F /* TripsView.xib */,
 				AE8ECB8F1BE2E4120074798D /* TripsTableViewCell.xib */,
-				AED5D3CA1BE41156000C8130 /* TripsViewTableCell.swift */,
+				AED5D3CA1BE41156000C8130 /* TripsTableViewCell.swift */,
 			);
 			path = TripsView;
 			sourceTree = "<group>";
@@ -374,8 +377,9 @@
 				AE878DFE1BE2B3E40004882F /* TripsView.swift in Sources */,
 				AE4659CA1BE814BE007B2929 /* BasicRequestManager.swift in Sources */,
 				AE4659CF1BE82F89007B2929 /* TripModel.swift in Sources */,
+				AEE892681BEAA10000C65FD2 /* TripsViewController.swift in Sources */,
 				AE4659CD1BE82F7E007B2929 /* UserModel.swift in Sources */,
-				AED5D3CB1BE41156000C8130 /* TripsViewTableCell.swift in Sources */,
+				AED5D3CB1BE41156000C8130 /* TripsTableViewCell.swift in Sources */,
 				AE7383941BE13EE200DD30AA /* AddTripViewController.swift in Sources */,
 				AE7BD9801BE0966A001B005D /* TripPlanner.xcdatamodeld in Sources */,
 				AE7BD9781BE0966A001B005D /* AppDelegate.swift in Sources */,

@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
-        <!--Planned Trips-->
+        <!--My Trips-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TripPlanner" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TripsViewController" customModule="TripPlanner" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -29,7 +29,13 @@
                             <constraint firstItem="tHj-ee-w0n" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="5" id="we4-uO-eEn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Planned Trips" id="sJe-ow-BLk">
+                    <navigationItem key="navigationItem" title="My Trips" id="sJe-ow-BLk">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="LME-dV-SDh">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="9ZW-o8-Pjp" kind="show" id="0Ll-Ke-cg2"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="EOT-lJ-j4e">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -38,6 +44,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tripsView" destination="tHj-ee-w0n" id="hva-rc-SVJ"/>
+                        <segue destination="hFL-rB-vDy" kind="show" identifier="showTableCellSeque" id="aDt-3K-Ii7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -74,7 +84,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Byi-aH-9jp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1183.5" y="389.5"/>
+            <point key="canvasLocation" x="717.5" y="1263.5"/>
+        </scene>
+        <!--Trip View-->
+        <scene sceneID="eOS-Nr-PhZ">
+            <objects>
+                <viewController id="hFL-rB-vDy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ztj-fz-Pbw"/>
+                        <viewControllerLayoutGuide type="bottom" id="hao-b1-dgC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bJp-d8-c8Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Trip View" id="cpm-as-KVt"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cGk-aP-o5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1327.5" y="836.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a4w-Cb-JvM">
@@ -85,6 +115,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BLo-Uh-nBc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.32184908200000001" green="0.69428891380000002" blue="0.60407499659999997" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
@@ -133,6 +164,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s2b-pn-MxY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-228.5" y="389.5"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="tYZ-CR-UL0">
+            <objects>
+                <viewController id="9ZW-o8-Pjp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oGV-aC-kEt"/>
+                        <viewControllerLayoutGuide type="bottom" id="UuW-Ou-pBE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1rg-5a-1gN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="WZF-yF-ulC"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1W3-Rb-EHG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1327.5" y="-4.5"/>
         </scene>
     </scenes>
 </document>
