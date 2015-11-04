@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="210" id="nZR-WY-oOz" customClass="TripsTableViewCell" customModule="TripPlanner">
+            <rect key="frame" x="0.0" y="0.0" width="425" height="210"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nZR-WY-oOz" id="OZg-vu-uZa">
+                <rect key="frame" x="0.0" y="0.0" width="425" height="209.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snow" translatesAutoresizingMaskIntoConstraints="NO" id="M3s-98-SQV">
+                        <rect key="frame" x="10" y="5" width="405" height="200"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VC8-Xa-CBe">
+                        <rect key="frame" x="8" y="92" width="409" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="400" id="Fwu-J8-HTu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Fwu-J8-HTu"/>
+                            </mask>
+                        </variation>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VC8-Xa-CBe" firstAttribute="leading" secondItem="OZg-vu-uZa" secondAttribute="leadingMargin" id="KKQ-pe-aon"/>
+                    <constraint firstItem="M3s-98-SQV" firstAttribute="leading" secondItem="OZg-vu-uZa" secondAttribute="leading" constant="10" id="WqD-YP-8Yb"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="VC8-Xa-CBe" secondAttribute="trailing" id="Zgu-f6-jpc"/>
+                    <constraint firstItem="VC8-Xa-CBe" firstAttribute="centerX" secondItem="OZg-vu-uZa" secondAttribute="centerX" id="dex-Or-EbM"/>
+                    <constraint firstAttribute="bottom" secondItem="M3s-98-SQV" secondAttribute="bottom" constant="5" id="jmM-xi-q38"/>
+                    <constraint firstAttribute="trailing" secondItem="M3s-98-SQV" secondAttribute="trailing" constant="10" id="lea-o5-rQi"/>
+                    <constraint firstItem="VC8-Xa-CBe" firstAttribute="centerY" secondItem="OZg-vu-uZa" secondAttribute="centerY" id="yUW-CQ-gOI"/>
+                    <constraint firstItem="M3s-98-SQV" firstAttribute="top" secondItem="OZg-vu-uZa" secondAttribute="top" constant="5" id="zO9-bF-8N0"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="dex-Or-EbM"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="backgroundImage" destination="M3s-98-SQV" id="Ac5-BK-xdu"/>
+                <outlet property="label" destination="VC8-Xa-CBe" id="QAr-ta-ilP"/>
+            </connections>
+            <point key="canvasLocation" x="430.5" y="312"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="snow" width="1800" height="900"/>
+    </resources>
+</document>

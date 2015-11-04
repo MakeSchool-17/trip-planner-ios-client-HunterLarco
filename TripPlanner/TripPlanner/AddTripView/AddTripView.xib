@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTripView" customModule="TripPlanner">
+            <connections>
+                <outlet property="bottomConstraint" destination="fzP-2k-pW8" id="bnB-FW-0s2"/>
+                <outlet property="centeredViewConstraint" destination="gwX-80-p9J" id="Qu9-B0-TD8"/>
+                <outlet property="navbar" destination="mRn-dH-JQ8" id="Wkf-47-Fw9"/>
+                <outlet property="textField" destination="CPo-y4-v45" id="97b-dq-xlZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="rdo-zX-Es2">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="667" id="5N6-k6-0Yd"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="5N6-k6-0Yd"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <navigationBar alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRn-dH-JQ8">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="Ueh-UG-Bif"/>
+                    </constraints>
+                    <textAttributes key="titleTextAttributes">
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="Add Trip" id="gBS-q5-Imv">
+                            <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="D8O-WF-3En">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="-1" id="pks-fu-y0a"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Add" id="0ZS-Vo-cp7">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="-1" id="hEu-hY-p49"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k7y-19-jNt" userLabel="Centering Frame">
+                    <rect key="frame" x="0.0" y="64" width="375" height="270"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HgX-ff-t04" userLabel="Text View">
+                            <rect key="frame" x="0.0" y="105" width="375" height="60"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHERE WILL YOUR NEXT TRIP TAKE YOU?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Daq-2X-di1">
+                                    <rect key="frame" x="60" y="7" width="256" height="15"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="To the moon, and beyond" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CPo-y4-v45">
+                                    <rect key="frame" x="8" y="22" width="359" height="29"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                                    <connections>
+                                        <action selector="textFieldSubmitted:" destination="-1" eventType="editingDidEndOnExit" id="EPQ-S2-HWj"/>
+                                    </connections>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="CPo-y4-v45" secondAttribute="bottom" constant="8" id="5Ng-Q9-PGh"/>
+                                <constraint firstItem="CPo-y4-v45" firstAttribute="top" secondItem="Daq-2X-di1" secondAttribute="bottom" constant="1" id="eL0-uW-MEC"/>
+                                <constraint firstAttribute="trailingMargin" secondItem="CPo-y4-v45" secondAttribute="trailing" id="eta-gz-WhX"/>
+                                <constraint firstItem="Daq-2X-di1" firstAttribute="centerX" secondItem="HgX-ff-t04" secondAttribute="centerX" id="gHI-QG-yC7"/>
+                                <constraint firstItem="CPo-y4-v45" firstAttribute="leading" secondItem="HgX-ff-t04" secondAttribute="leadingMargin" id="ld7-yf-M9H"/>
+                                <constraint firstItem="Daq-2X-di1" firstAttribute="top" secondItem="HgX-ff-t04" secondAttribute="top" constant="7" id="s7G-qZ-Crw"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="HgX-ff-t04" firstAttribute="centerY" secondItem="k7y-19-jNt" secondAttribute="centerY" id="9nh-sd-xRq"/>
+                        <constraint firstAttribute="trailing" secondItem="HgX-ff-t04" secondAttribute="trailing" id="JIX-bI-Qhl"/>
+                        <constraint firstItem="HgX-ff-t04" firstAttribute="leading" secondItem="k7y-19-jNt" secondAttribute="leading" id="o21-Sg-hmf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="mRn-dH-JQ8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="D79-4p-6pc"/>
+                <constraint firstAttribute="trailing" secondItem="rdo-zX-Es2" secondAttribute="trailing" id="Faz-k8-aiq"/>
+                <constraint firstItem="rdo-zX-Es2" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="NO1-E0-B4i"/>
+                <constraint firstAttribute="trailing" secondItem="k7y-19-jNt" secondAttribute="trailing" id="QE4-3Q-duz"/>
+                <constraint firstItem="rdo-zX-Es2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Rhm-Qp-HBQ"/>
+                <constraint firstAttribute="trailing" secondItem="mRn-dH-JQ8" secondAttribute="trailing" id="ZnA-tQ-ZwA"/>
+                <constraint firstAttribute="bottom" secondItem="rdo-zX-Es2" secondAttribute="bottom" id="fzP-2k-pW8"/>
+                <constraint firstItem="rdo-zX-Es2" firstAttribute="centerY" secondItem="k7y-19-jNt" secondAttribute="bottom" id="gwX-80-p9J"/>
+                <constraint firstItem="k7y-19-jNt" firstAttribute="top" secondItem="mRn-dH-JQ8" secondAttribute="bottom" id="him-lo-rKR"/>
+                <constraint firstItem="k7y-19-jNt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mSC-1W-6C1"/>
+                <constraint firstItem="mRn-dH-JQ8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="o5W-41-jtN"/>
+                <constraint firstItem="k7y-19-jNt" firstAttribute="height" secondItem="rdo-zX-Es2" secondAttribute="height" multiplier="1:2" id="zZg-Gm-rav"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="zZg-Gm-rav"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="406.5" y="228.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mountains" width="1500" height="2550"/>
+    </resources>
+</document>

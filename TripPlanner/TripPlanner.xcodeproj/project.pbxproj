@@ -7,66 +7,98 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE7BD93B1BE0951B001B005D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BD93A1BE0951B001B005D /* AppDelegate.swift */; };
-		AE7BD93D1BE0951B001B005D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BD93C1BE0951B001B005D /* ViewController.swift */; };
-		AE7BD9401BE0951B001B005D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7BD93E1BE0951B001B005D /* Main.storyboard */; };
-		AE7BD9431BE0951B001B005D /* TripPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE7BD9411BE0951B001B005D /* TripPlanner.xcdatamodeld */; };
-		AE7BD9451BE0951B001B005D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE7BD9441BE0951B001B005D /* Assets.xcassets */; };
-		AE7BD9481BE0951B001B005D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7BD9461BE0951B001B005D /* LaunchScreen.storyboard */; };
-		AE7BD9531BE0951B001B005D /* TripPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BD9521BE0951B001B005D /* TripPlannerTests.swift */; };
-		AE7BD95E1BE0951B001B005D /* TripPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BD95D1BE0951B001B005D /* TripPlannerUITests.swift */; };
+		AE0AB4931BE94CA1001EDD2B /* RequestErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AB4921BE94CA1001EDD2B /* RequestErrorManager.swift */; };
+		AE0AB4961BE95ACB001EDD2B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0AB4951BE95ACB001EDD2B /* LoginView.swift */; };
+		AE0AB4981BE95AD1001EDD2B /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE0AB4971BE95AD1001EDD2B /* LoginView.xib */; };
+		AE4659CA1BE814BE007B2929 /* BasicRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4659C91BE814BE007B2929 /* BasicRequestManager.swift */; };
+		AE4659CD1BE82F7E007B2929 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4659CC1BE82F7E007B2929 /* UserModel.swift */; };
+		AE4659CF1BE82F89007B2929 /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4659CE1BE82F89007B2929 /* TripModel.swift */; };
+		AE4659D11BE8336F007B2929 /* BasicAuthString.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4659D01BE8336F007B2929 /* BasicAuthString.swift */; };
+		AE4659DA1BE93AA2007B2929 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4659D91BE93AA2007B2929 /* LoginViewController.swift */; };
+		AE7383941BE13EE200DD30AA /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7383931BE13EE200DD30AA /* AddTripViewController.swift */; };
+		AE7BD9781BE0966A001B005D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BD9771BE0966A001B005D /* AppDelegate.swift */; };
+		AE7BD97D1BE0966A001B005D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7BD97B1BE0966A001B005D /* Main.storyboard */; };
+		AE7BD9801BE0966A001B005D /* TripPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE7BD97E1BE0966A001B005D /* TripPlanner.xcdatamodeld */; };
+		AE7BD9821BE0966A001B005D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE7BD9811BE0966A001B005D /* Assets.xcassets */; };
+		AE7BD9851BE0966A001B005D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7BD9831BE0966A001B005D /* LaunchScreen.storyboard */; };
+		AE7BD9901BE0966A001B005D /* TripPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BD98F1BE0966A001B005D /* TripPlannerTests.swift */; };
+		AE7BD99B1BE0966A001B005D /* TripPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BD99A1BE0966A001B005D /* TripPlannerUITests.swift */; };
+		AE878DFA1BE2B2A30004882F /* AddTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE878DF81BE2B2A30004882F /* AddTripView.swift */; };
+		AE878DFB1BE2B2A30004882F /* AddTripView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE878DF91BE2B2A30004882F /* AddTripView.xib */; };
+		AE878DFE1BE2B3E40004882F /* TripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE878DFD1BE2B3E40004882F /* TripsView.swift */; };
+		AE878E001BE2B4170004882F /* TripsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE878DFF1BE2B4170004882F /* TripsView.xib */; };
+		AE8ECB901BE2E4120074798D /* TripsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE8ECB8F1BE2E4120074798D /* TripsTableViewCell.xib */; };
+		AED5D3CB1BE41156000C8130 /* TripsViewTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED5D3CA1BE41156000C8130 /* TripsViewTableCell.swift */; };
+		AEE892641BE9733500C65FD2 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE892631BE9733500C65FD2 /* DBManager.swift */; };
+		AEE892661BE98D3300C65FD2 /* ManagedUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE892651BE98D3300C65FD2 /* ManagedUserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AE7BD94F1BE0951B001B005D /* PBXContainerItemProxy */ = {
+		AE7BD98C1BE0966A001B005D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AE7BD92F1BE0951B001B005D /* Project object */;
+			containerPortal = AE7BD96C1BE0966A001B005D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AE7BD9361BE0951B001B005D;
+			remoteGlobalIDString = AE7BD9731BE0966A001B005D;
 			remoteInfo = TripPlanner;
 		};
-		AE7BD95A1BE0951B001B005D /* PBXContainerItemProxy */ = {
+		AE7BD9971BE0966A001B005D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AE7BD92F1BE0951B001B005D /* Project object */;
+			containerPortal = AE7BD96C1BE0966A001B005D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AE7BD9361BE0951B001B005D;
+			remoteGlobalIDString = AE7BD9731BE0966A001B005D;
 			remoteInfo = TripPlanner;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AE7BD9371BE0951B001B005D /* TripPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE7BD93A1BE0951B001B005D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AE7BD93C1BE0951B001B005D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AE7BD93F1BE0951B001B005D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AE7BD9421BE0951B001B005D /* TripPlanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TripPlanner.xcdatamodel; sourceTree = "<group>"; };
-		AE7BD9441BE0951B001B005D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AE7BD9471BE0951B001B005D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AE7BD9491BE0951B001B005D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AE7BD94E1BE0951B001B005D /* TripPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE7BD9521BE0951B001B005D /* TripPlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPlannerTests.swift; sourceTree = "<group>"; };
-		AE7BD9541BE0951B001B005D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AE7BD9591BE0951B001B005D /* TripPlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripPlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE7BD95D1BE0951B001B005D /* TripPlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPlannerUITests.swift; sourceTree = "<group>"; };
-		AE7BD95F1BE0951B001B005D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE0AB4921BE94CA1001EDD2B /* RequestErrorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestErrorManager.swift; sourceTree = "<group>"; };
+		AE0AB4951BE95ACB001EDD2B /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AE0AB4971BE95AD1001EDD2B /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		AE4659C91BE814BE007B2929 /* BasicRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicRequestManager.swift; sourceTree = "<group>"; };
+		AE4659CC1BE82F7E007B2929 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		AE4659CE1BE82F89007B2929 /* TripModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
+		AE4659D01BE8336F007B2929 /* BasicAuthString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicAuthString.swift; sourceTree = "<group>"; };
+		AE4659D91BE93AA2007B2929 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AE7383931BE13EE200DD30AA /* AddTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddTripViewController.swift; path = ../AddTripViewController.swift; sourceTree = "<group>"; };
+		AE7BD9741BE0966A001B005D /* TripPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE7BD9771BE0966A001B005D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AE7BD97C1BE0966A001B005D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE7BD97F1BE0966A001B005D /* TripPlanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TripPlanner.xcdatamodel; sourceTree = "<group>"; };
+		AE7BD9811BE0966A001B005D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE7BD9841BE0966A001B005D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE7BD9861BE0966A001B005D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE7BD98B1BE0966A001B005D /* TripPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE7BD98F1BE0966A001B005D /* TripPlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPlannerTests.swift; sourceTree = "<group>"; };
+		AE7BD9911BE0966A001B005D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE7BD9961BE0966A001B005D /* TripPlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripPlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE7BD99A1BE0966A001B005D /* TripPlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPlannerUITests.swift; sourceTree = "<group>"; };
+		AE7BD99C1BE0966A001B005D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE878DF81BE2B2A30004882F /* AddTripView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTripView.swift; sourceTree = "<group>"; };
+		AE878DF91BE2B2A30004882F /* AddTripView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddTripView.xib; sourceTree = "<group>"; };
+		AE878DFD1BE2B3E40004882F /* TripsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsView.swift; sourceTree = "<group>"; };
+		AE878DFF1BE2B4170004882F /* TripsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TripsView.xib; sourceTree = "<group>"; };
+		AE8ECB8F1BE2E4120074798D /* TripsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TripsTableViewCell.xib; sourceTree = "<group>"; };
+		AED5D3CA1BE41156000C8130 /* TripsViewTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsViewTableCell.swift; sourceTree = "<group>"; };
+		AEE892631BE9733500C65FD2 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		AEE892651BE98D3300C65FD2 /* ManagedUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedUserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AE7BD9341BE0951B001B005D /* Frameworks */ = {
+		AE7BD9711BE0966A001B005D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE7BD94B1BE0951B001B005D /* Frameworks */ = {
+		AE7BD9881BE0966A001B005D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE7BD9561BE0951B001B005D /* Frameworks */ = {
+		AE7BD9931BE0966A001B005D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,68 +108,140 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AE7BD92E1BE0951B001B005D = {
+		AE0AB4941BE95AC2001EDD2B /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
-				AE7BD9391BE0951B001B005D /* TripPlanner */,
-				AE7BD9511BE0951B001B005D /* TripPlannerTests */,
-				AE7BD95C1BE0951B001B005D /* TripPlannerUITests */,
-				AE7BD9381BE0951B001B005D /* Products */,
+				AE0AB4951BE95ACB001EDD2B /* LoginView.swift */,
+				AE0AB4971BE95AD1001EDD2B /* LoginView.xib */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		AE4659C81BE814A1007B2929 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AE4659C91BE814BE007B2929 /* BasicRequestManager.swift */,
+				AE4659D01BE8336F007B2929 /* BasicAuthString.swift */,
+				AE0AB4921BE94CA1001EDD2B /* RequestErrorManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		AE4659CB1BE82F70007B2929 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AEE892651BE98D3300C65FD2 /* ManagedUserModel.swift */,
+				AE4659CC1BE82F7E007B2929 /* UserModel.swift */,
+				AE4659CE1BE82F89007B2929 /* TripModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AE7383951BE1495500DD30AA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AE7383931BE13EE200DD30AA /* AddTripViewController.swift */,
+				AE4659D91BE93AA2007B2929 /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AE7BD96B1BE0966A001B005D = {
+			isa = PBXGroup;
+			children = (
+				AE7BD9761BE0966A001B005D /* TripPlanner */,
+				AE7BD98E1BE0966A001B005D /* TripPlannerTests */,
+				AE7BD9991BE0966A001B005D /* TripPlannerUITests */,
+				AE7BD9751BE0966A001B005D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AE7BD9381BE0951B001B005D /* Products */ = {
+		AE7BD9751BE0966A001B005D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AE7BD9371BE0951B001B005D /* TripPlanner.app */,
-				AE7BD94E1BE0951B001B005D /* TripPlannerTests.xctest */,
-				AE7BD9591BE0951B001B005D /* TripPlannerUITests.xctest */,
+				AE7BD9741BE0966A001B005D /* TripPlanner.app */,
+				AE7BD98B1BE0966A001B005D /* TripPlannerTests.xctest */,
+				AE7BD9961BE0966A001B005D /* TripPlannerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AE7BD9391BE0951B001B005D /* TripPlanner */ = {
+		AE7BD9761BE0966A001B005D /* TripPlanner */ = {
 			isa = PBXGroup;
 			children = (
-				AE7BD93A1BE0951B001B005D /* AppDelegate.swift */,
-				AE7BD93C1BE0951B001B005D /* ViewController.swift */,
-				AE7BD93E1BE0951B001B005D /* Main.storyboard */,
-				AE7BD9441BE0951B001B005D /* Assets.xcassets */,
-				AE7BD9461BE0951B001B005D /* LaunchScreen.storyboard */,
-				AE7BD9491BE0951B001B005D /* Info.plist */,
-				AE7BD9411BE0951B001B005D /* TripPlanner.xcdatamodeld */,
+				AEE892621BE9730D00C65FD2 /* Datastore */,
+				AE0AB4941BE95AC2001EDD2B /* LoginView */,
+				AE4659CB1BE82F70007B2929 /* Models */,
+				AE4659C81BE814A1007B2929 /* Networking */,
+				AE878DFC1BE2B2B60004882F /* TripsView */,
+				AE878DF71BE2B2A30004882F /* AddTripView */,
+				AE7383951BE1495500DD30AA /* Controllers */,
+				AE7BD9771BE0966A001B005D /* AppDelegate.swift */,
+				AE7BD97B1BE0966A001B005D /* Main.storyboard */,
+				AE7BD9811BE0966A001B005D /* Assets.xcassets */,
+				AE7BD9831BE0966A001B005D /* LaunchScreen.storyboard */,
+				AE7BD9861BE0966A001B005D /* Info.plist */,
+				AE7BD97E1BE0966A001B005D /* TripPlanner.xcdatamodeld */,
 			);
 			path = TripPlanner;
 			sourceTree = "<group>";
 		};
-		AE7BD9511BE0951B001B005D /* TripPlannerTests */ = {
+		AE7BD98E1BE0966A001B005D /* TripPlannerTests */ = {
 			isa = PBXGroup;
 			children = (
-				AE7BD9521BE0951B001B005D /* TripPlannerTests.swift */,
-				AE7BD9541BE0951B001B005D /* Info.plist */,
+				AE7BD98F1BE0966A001B005D /* TripPlannerTests.swift */,
+				AE7BD9911BE0966A001B005D /* Info.plist */,
 			);
 			path = TripPlannerTests;
 			sourceTree = "<group>";
 		};
-		AE7BD95C1BE0951B001B005D /* TripPlannerUITests */ = {
+		AE7BD9991BE0966A001B005D /* TripPlannerUITests */ = {
 			isa = PBXGroup;
 			children = (
-				AE7BD95D1BE0951B001B005D /* TripPlannerUITests.swift */,
-				AE7BD95F1BE0951B001B005D /* Info.plist */,
+				AE7BD99A1BE0966A001B005D /* TripPlannerUITests.swift */,
+				AE7BD99C1BE0966A001B005D /* Info.plist */,
 			);
 			path = TripPlannerUITests;
+			sourceTree = "<group>";
+		};
+		AE878DF71BE2B2A30004882F /* AddTripView */ = {
+			isa = PBXGroup;
+			children = (
+				AE878DF81BE2B2A30004882F /* AddTripView.swift */,
+				AE878DF91BE2B2A30004882F /* AddTripView.xib */,
+			);
+			path = AddTripView;
+			sourceTree = "<group>";
+		};
+		AE878DFC1BE2B2B60004882F /* TripsView */ = {
+			isa = PBXGroup;
+			children = (
+				AE878DFD1BE2B3E40004882F /* TripsView.swift */,
+				AE878DFF1BE2B4170004882F /* TripsView.xib */,
+				AE8ECB8F1BE2E4120074798D /* TripsTableViewCell.xib */,
+				AED5D3CA1BE41156000C8130 /* TripsViewTableCell.swift */,
+			);
+			path = TripsView;
+			sourceTree = "<group>";
+		};
+		AEE892621BE9730D00C65FD2 /* Datastore */ = {
+			isa = PBXGroup;
+			children = (
+				AEE892631BE9733500C65FD2 /* DBManager.swift */,
+			);
+			path = Datastore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AE7BD9361BE0951B001B005D /* TripPlanner */ = {
+		AE7BD9731BE0966A001B005D /* TripPlanner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE7BD9621BE0951B001B005D /* Build configuration list for PBXNativeTarget "TripPlanner" */;
+			buildConfigurationList = AE7BD99F1BE0966B001B005D /* Build configuration list for PBXNativeTarget "TripPlanner" */;
 			buildPhases = (
-				AE7BD9331BE0951B001B005D /* Sources */,
-				AE7BD9341BE0951B001B005D /* Frameworks */,
-				AE7BD9351BE0951B001B005D /* Resources */,
+				AE7BD9701BE0966A001B005D /* Sources */,
+				AE7BD9711BE0966A001B005D /* Frameworks */,
+				AE7BD9721BE0966A001B005D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -145,71 +249,71 @@
 			);
 			name = TripPlanner;
 			productName = TripPlanner;
-			productReference = AE7BD9371BE0951B001B005D /* TripPlanner.app */;
+			productReference = AE7BD9741BE0966A001B005D /* TripPlanner.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AE7BD94D1BE0951B001B005D /* TripPlannerTests */ = {
+		AE7BD98A1BE0966A001B005D /* TripPlannerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE7BD9651BE0951B001B005D /* Build configuration list for PBXNativeTarget "TripPlannerTests" */;
+			buildConfigurationList = AE7BD9A21BE0966B001B005D /* Build configuration list for PBXNativeTarget "TripPlannerTests" */;
 			buildPhases = (
-				AE7BD94A1BE0951B001B005D /* Sources */,
-				AE7BD94B1BE0951B001B005D /* Frameworks */,
-				AE7BD94C1BE0951B001B005D /* Resources */,
+				AE7BD9871BE0966A001B005D /* Sources */,
+				AE7BD9881BE0966A001B005D /* Frameworks */,
+				AE7BD9891BE0966A001B005D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AE7BD9501BE0951B001B005D /* PBXTargetDependency */,
+				AE7BD98D1BE0966A001B005D /* PBXTargetDependency */,
 			);
 			name = TripPlannerTests;
 			productName = TripPlannerTests;
-			productReference = AE7BD94E1BE0951B001B005D /* TripPlannerTests.xctest */;
+			productReference = AE7BD98B1BE0966A001B005D /* TripPlannerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AE7BD9581BE0951B001B005D /* TripPlannerUITests */ = {
+		AE7BD9951BE0966A001B005D /* TripPlannerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE7BD9681BE0951B001B005D /* Build configuration list for PBXNativeTarget "TripPlannerUITests" */;
+			buildConfigurationList = AE7BD9A51BE0966B001B005D /* Build configuration list for PBXNativeTarget "TripPlannerUITests" */;
 			buildPhases = (
-				AE7BD9551BE0951B001B005D /* Sources */,
-				AE7BD9561BE0951B001B005D /* Frameworks */,
-				AE7BD9571BE0951B001B005D /* Resources */,
+				AE7BD9921BE0966A001B005D /* Sources */,
+				AE7BD9931BE0966A001B005D /* Frameworks */,
+				AE7BD9941BE0966A001B005D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AE7BD95B1BE0951B001B005D /* PBXTargetDependency */,
+				AE7BD9981BE0966A001B005D /* PBXTargetDependency */,
 			);
 			name = TripPlannerUITests;
 			productName = TripPlannerUITests;
-			productReference = AE7BD9591BE0951B001B005D /* TripPlannerUITests.xctest */;
+			productReference = AE7BD9961BE0966A001B005D /* TripPlannerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AE7BD92F1BE0951B001B005D /* Project object */ = {
+		AE7BD96C1BE0966A001B005D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = larcolabs;
 				TargetAttributes = {
-					AE7BD9361BE0951B001B005D = {
+					AE7BD9731BE0966A001B005D = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = H8UFZ66J97;
 					};
-					AE7BD94D1BE0951B001B005D = {
+					AE7BD98A1BE0966A001B005D = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = H8UFZ66J97;
-						TestTargetID = AE7BD9361BE0951B001B005D;
+						TestTargetID = AE7BD9731BE0966A001B005D;
 					};
-					AE7BD9581BE0951B001B005D = {
+					AE7BD9951BE0966A001B005D = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = H8UFZ66J97;
-						TestTargetID = AE7BD9361BE0951B001B005D;
+						TestTargetID = AE7BD9731BE0966A001B005D;
 					};
 				};
 			};
-			buildConfigurationList = AE7BD9321BE0951B001B005D /* Build configuration list for PBXProject "TripPlanner" */;
+			buildConfigurationList = AE7BD96F1BE0966A001B005D /* Build configuration list for PBXProject "TripPlanner" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -217,37 +321,41 @@
 				en,
 				Base,
 			);
-			mainGroup = AE7BD92E1BE0951B001B005D;
-			productRefGroup = AE7BD9381BE0951B001B005D /* Products */;
+			mainGroup = AE7BD96B1BE0966A001B005D;
+			productRefGroup = AE7BD9751BE0966A001B005D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AE7BD9361BE0951B001B005D /* TripPlanner */,
-				AE7BD94D1BE0951B001B005D /* TripPlannerTests */,
-				AE7BD9581BE0951B001B005D /* TripPlannerUITests */,
+				AE7BD9731BE0966A001B005D /* TripPlanner */,
+				AE7BD98A1BE0966A001B005D /* TripPlannerTests */,
+				AE7BD9951BE0966A001B005D /* TripPlannerUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AE7BD9351BE0951B001B005D /* Resources */ = {
+		AE7BD9721BE0966A001B005D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE7BD9481BE0951B001B005D /* LaunchScreen.storyboard in Resources */,
-				AE7BD9451BE0951B001B005D /* Assets.xcassets in Resources */,
-				AE7BD9401BE0951B001B005D /* Main.storyboard in Resources */,
+				AE7BD9851BE0966A001B005D /* LaunchScreen.storyboard in Resources */,
+				AE7BD9821BE0966A001B005D /* Assets.xcassets in Resources */,
+				AE8ECB901BE2E4120074798D /* TripsTableViewCell.xib in Resources */,
+				AE0AB4981BE95AD1001EDD2B /* LoginView.xib in Resources */,
+				AE7BD97D1BE0966A001B005D /* Main.storyboard in Resources */,
+				AE878DFB1BE2B2A30004882F /* AddTripView.xib in Resources */,
+				AE878E001BE2B4170004882F /* TripsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE7BD94C1BE0951B001B005D /* Resources */ = {
+		AE7BD9891BE0966A001B005D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE7BD9571BE0951B001B005D /* Resources */ = {
+		AE7BD9941BE0966A001B005D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -257,60 +365,72 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AE7BD9331BE0951B001B005D /* Sources */ = {
+		AE7BD9701BE0966A001B005D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE7BD93D1BE0951B001B005D /* ViewController.swift in Sources */,
-				AE7BD9431BE0951B001B005D /* TripPlanner.xcdatamodeld in Sources */,
-				AE7BD93B1BE0951B001B005D /* AppDelegate.swift in Sources */,
+				AE0AB4931BE94CA1001EDD2B /* RequestErrorManager.swift in Sources */,
+				AE4659D11BE8336F007B2929 /* BasicAuthString.swift in Sources */,
+				AE878DFE1BE2B3E40004882F /* TripsView.swift in Sources */,
+				AE4659CA1BE814BE007B2929 /* BasicRequestManager.swift in Sources */,
+				AE4659CF1BE82F89007B2929 /* TripModel.swift in Sources */,
+				AE4659CD1BE82F7E007B2929 /* UserModel.swift in Sources */,
+				AED5D3CB1BE41156000C8130 /* TripsViewTableCell.swift in Sources */,
+				AE7383941BE13EE200DD30AA /* AddTripViewController.swift in Sources */,
+				AE7BD9801BE0966A001B005D /* TripPlanner.xcdatamodeld in Sources */,
+				AE7BD9781BE0966A001B005D /* AppDelegate.swift in Sources */,
+				AE0AB4961BE95ACB001EDD2B /* LoginView.swift in Sources */,
+				AE878DFA1BE2B2A30004882F /* AddTripView.swift in Sources */,
+				AE4659DA1BE93AA2007B2929 /* LoginViewController.swift in Sources */,
+				AEE892641BE9733500C65FD2 /* DBManager.swift in Sources */,
+				AEE892661BE98D3300C65FD2 /* ManagedUserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE7BD94A1BE0951B001B005D /* Sources */ = {
+		AE7BD9871BE0966A001B005D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE7BD9531BE0951B001B005D /* TripPlannerTests.swift in Sources */,
+				AE7BD9901BE0966A001B005D /* TripPlannerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE7BD9551BE0951B001B005D /* Sources */ = {
+		AE7BD9921BE0966A001B005D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE7BD95E1BE0951B001B005D /* TripPlannerUITests.swift in Sources */,
+				AE7BD99B1BE0966A001B005D /* TripPlannerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AE7BD9501BE0951B001B005D /* PBXTargetDependency */ = {
+		AE7BD98D1BE0966A001B005D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AE7BD9361BE0951B001B005D /* TripPlanner */;
-			targetProxy = AE7BD94F1BE0951B001B005D /* PBXContainerItemProxy */;
+			target = AE7BD9731BE0966A001B005D /* TripPlanner */;
+			targetProxy = AE7BD98C1BE0966A001B005D /* PBXContainerItemProxy */;
 		};
-		AE7BD95B1BE0951B001B005D /* PBXTargetDependency */ = {
+		AE7BD9981BE0966A001B005D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AE7BD9361BE0951B001B005D /* TripPlanner */;
-			targetProxy = AE7BD95A1BE0951B001B005D /* PBXContainerItemProxy */;
+			target = AE7BD9731BE0966A001B005D /* TripPlanner */;
+			targetProxy = AE7BD9971BE0966A001B005D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AE7BD93E1BE0951B001B005D /* Main.storyboard */ = {
+		AE7BD97B1BE0966A001B005D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AE7BD93F1BE0951B001B005D /* Base */,
+				AE7BD97C1BE0966A001B005D /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		AE7BD9461BE0951B001B005D /* LaunchScreen.storyboard */ = {
+		AE7BD9831BE0966A001B005D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AE7BD9471BE0951B001B005D /* Base */,
+				AE7BD9841BE0966A001B005D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -318,7 +438,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		AE7BD9601BE0951B001B005D /* Debug */ = {
+		AE7BD99D1BE0966B001B005D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -362,7 +482,7 @@
 			};
 			name = Debug;
 		};
-		AE7BD9611BE0951B001B005D /* Release */ = {
+		AE7BD99E1BE0966B001B005D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -399,29 +519,31 @@
 			};
 			name = Release;
 		};
-		AE7BD9631BE0951B001B005D /* Debug */ = {
+		AE7BD9A01BE0966B001B005D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TripPlanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.larcolabs.TripPlanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		AE7BD9641BE0951B001B005D /* Release */ = {
+		AE7BD9A11BE0966B001B005D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TripPlanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.larcolabs.TripPlanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		AE7BD9661BE0951B001B005D /* Debug */ = {
+		AE7BD9A31BE0966B001B005D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -433,7 +555,7 @@
 			};
 			name = Debug;
 		};
-		AE7BD9671BE0951B001B005D /* Release */ = {
+		AE7BD9A41BE0966B001B005D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -445,7 +567,7 @@
 			};
 			name = Release;
 		};
-		AE7BD9691BE0951B001B005D /* Debug */ = {
+		AE7BD9A61BE0966B001B005D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = TripPlannerUITests/Info.plist;
@@ -457,7 +579,7 @@
 			};
 			name = Debug;
 		};
-		AE7BD96A1BE0951B001B005D /* Release */ = {
+		AE7BD9A71BE0966B001B005D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = TripPlannerUITests/Info.plist;
@@ -472,53 +594,56 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AE7BD9321BE0951B001B005D /* Build configuration list for PBXProject "TripPlanner" */ = {
+		AE7BD96F1BE0966A001B005D /* Build configuration list for PBXProject "TripPlanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AE7BD9601BE0951B001B005D /* Debug */,
-				AE7BD9611BE0951B001B005D /* Release */,
+				AE7BD99D1BE0966B001B005D /* Debug */,
+				AE7BD99E1BE0966B001B005D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AE7BD9621BE0951B001B005D /* Build configuration list for PBXNativeTarget "TripPlanner" */ = {
+		AE7BD99F1BE0966B001B005D /* Build configuration list for PBXNativeTarget "TripPlanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AE7BD9631BE0951B001B005D /* Debug */,
-				AE7BD9641BE0951B001B005D /* Release */,
+				AE7BD9A01BE0966B001B005D /* Debug */,
+				AE7BD9A11BE0966B001B005D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		AE7BD9651BE0951B001B005D /* Build configuration list for PBXNativeTarget "TripPlannerTests" */ = {
+		AE7BD9A21BE0966B001B005D /* Build configuration list for PBXNativeTarget "TripPlannerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AE7BD9661BE0951B001B005D /* Debug */,
-				AE7BD9671BE0951B001B005D /* Release */,
+				AE7BD9A31BE0966B001B005D /* Debug */,
+				AE7BD9A41BE0966B001B005D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		AE7BD9681BE0951B001B005D /* Build configuration list for PBXNativeTarget "TripPlannerUITests" */ = {
+		AE7BD9A51BE0966B001B005D /* Build configuration list for PBXNativeTarget "TripPlannerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AE7BD9691BE0951B001B005D /* Debug */,
-				AE7BD96A1BE0951B001B005D /* Release */,
+				AE7BD9A61BE0966B001B005D /* Debug */,
+				AE7BD9A71BE0966B001B005D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		AE7BD9411BE0951B001B005D /* TripPlanner.xcdatamodeld */ = {
+		AE7BD97E1BE0966A001B005D /* TripPlanner.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				AE7BD9421BE0951B001B005D /* TripPlanner.xcdatamodel */,
+				AE7BD97F1BE0966A001B005D /* TripPlanner.xcdatamodel */,
 			);
-			currentVersion = AE7BD9421BE0951B001B005D /* TripPlanner.xcdatamodel */;
+			currentVersion = AE7BD97F1BE0966A001B005D /* TripPlanner.xcdatamodel */;
 			path = TripPlanner.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = AE7BD92F1BE0951B001B005D /* Project object */;
+	rootObject = AE7BD96C1BE0966A001B005D /* Project object */;
 }
