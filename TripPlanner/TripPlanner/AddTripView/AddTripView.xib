@@ -8,7 +8,7 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTripView" customModule="TripPlanner" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTripView" customModule="TripPlanner">
             <connections>
                 <outlet property="bottomConstraint" destination="fzP-2k-pW8" id="bnB-FW-0s2"/>
                 <outlet property="centeredViewConstraint" destination="gwX-80-p9J" id="Qu9-B0-TD8"/>

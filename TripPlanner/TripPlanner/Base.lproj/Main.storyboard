@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vxK-4V-OPC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eJg-u1-2c7">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -8,7 +8,7 @@
         <!--Planned Trips-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TripPlanner" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHj-ee-w0n" customClass="TripsView" customModule="TripPlanner" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHj-ee-w0n" customClass="TripsView" customModule="TripPlanner">
                                 <rect key="frame" x="0.0" y="5" width="375" height="657"/>
                             </view>
                         </subviews>
@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="717.5" y="389.5"/>
         </scene>
-        <!--Trip Detail View Controller-->
+        <!--Add Trip View Controller-->
         <scene sceneID="4K6-jV-FP6">
             <objects>
-                <viewController id="Iyh-YW-Vqn" customClass="TripDetailViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Iyh-YW-Vqn" customClass="AddTripViewController" customModule="TripPlanner" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ogo-DG-QAH"/>
                         <viewControllerLayoutGuide type="bottom" id="rc9-oM-GnU"/>
@@ -55,7 +55,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEa-Yh-1yC" customClass="AddTripView" customModule="TripPlanner" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEa-Yh-1yC" customClass="AddTripView" customModule="TripPlanner">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </view>
                         </subviews>
@@ -98,6 +98,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XPo-le-hAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="263" y="390"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="7f0-pD-B0B">
+            <objects>
+                <viewController id="eJg-u1-2c7" customClass="LoginViewController" customModule="TripPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UFN-63-dUP"/>
+                        <viewControllerLayoutGuide type="bottom" id="std-IG-bbU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q5Z-m5-aLy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lER-9g-NiN" customClass="LoginView" customModule="TripPlanner" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lER-9g-NiN" firstAttribute="top" secondItem="q5Z-m5-aLy" secondAttribute="top" id="5i2-gV-I7c"/>
+                            <constraint firstItem="std-IG-bbU" firstAttribute="top" secondItem="lER-9g-NiN" secondAttribute="bottom" id="Okl-uW-06o"/>
+                            <constraint firstAttribute="trailing" secondItem="lER-9g-NiN" secondAttribute="trailing" id="UwJ-yZ-zwX"/>
+                            <constraint firstItem="lER-9g-NiN" firstAttribute="leading" secondItem="q5Z-m5-aLy" secondAttribute="leading" id="b3Z-Yo-JqM"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="loginForm" destination="lER-9g-NiN" id="yJN-vc-yDK"/>
+                        <segue destination="vxK-4V-OPC" kind="show" identifier="transitionFromLogin" id="Xkc-Ws-Lrp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s2b-pn-MxY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228.5" y="389.5"/>
         </scene>
     </scenes>
 </document>

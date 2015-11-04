@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TripDetailViewController: UIViewController {
+class AddTripViewController: UIViewController {
     
     @IBOutlet weak var tripForm: AddTripView!
     
@@ -20,13 +20,13 @@ class TripDetailViewController: UIViewController {
     
 }
 
-extension TripDetailViewController: TripViewDelegate {
+extension AddTripViewController: TripViewDelegate {
     
     func formSubmitted(tripView: AddTripView, text: String) {
-        let authToken = BasicAuthString(username: "jane@doe.com", password: "secrestpassword")
-        let user = UserModel(basicAuth: authToken)
+//        let authToken = BasicAuthString(username: "jane@doe.com", password: "secrestpassword")
+//        let user = UserModel(basicAuth: authToken)
         
-        user.getTrips(onTripsResponse, onJSONParsingError: onJSONParsingError, onResponseFailure: onTripsFailure)
+//        user.getTrips(onTripsResponse, onJSONParsingError: onJSONParsingError, onResponseFailure: onTripsFailure)
         
         dismissViewControllerAnimated(true, completion: nil)
     }

@@ -10,12 +10,12 @@ import Foundation
 
 class UserModel {
     
-    private let basicAuth: BasicAuthString
+    let basicAuth: BasicAuthString
     
     class func create(
-        onResponseSuccess: (json: NSDictionary) -> (),
-        onJSONParsingError: (jsonStr: String?) -> (),
-        onResponseFailure: (code: Int) -> (),
+        onSuccess: (user: UserModel) -> Void,
+        onEmailTaken: () -> Void,
+        onUnknownError: () -> Void,
         email: String,
         password: String
     ) {
@@ -23,36 +23,42 @@ class UserModel {
         body["email"] = email
         body["password"] = password
         
-        RequestHelper.post(
-            onResponseSuccess,
-            onJSONParsingError: onJSONParsingError,
-            onResponseFailure: onResponseFailure,
-            url: "http://localhost:8080/trips/",
+        RequestErrorManager.post(
+            {(json: NSDictionary) in
+                // on response success
+                let authString = BasicAuthString(username: email, password: password)
+                onSuccess(user: UserModel(basicAuth: authString))
+            },
+            onUnknownError: onUnknownError,
+            errorMap: [409: onEmailTaken],
+            url: "http://localhost:8080/users/",
             body: body,
             headers: nil
+        )
+    }
+    
+    class func login(
+        onSuccess: (user: UserModel) -> Void,
+        onInvalidCredentials: () -> Void,
+        onUnknownError: () -> Void,
+        email: String,
+        password: String
+    ) {
+        RequestErrorManager.get(
+            {(json: NSDictionary) in
+                // on response success
+                let authString = BasicAuthString(username: email, password: password)
+                onSuccess(user: UserModel(basicAuth: authString))
+            },
+            onUnknownError: onUnknownError,
+            errorMap: [401: onInvalidCredentials],
+            url: "http://localhost:8080/users/",
+            headers: BasicAuthString(username: email, password: password).formHeader()
         )
     }
     
     init (basicAuth: BasicAuthString) {
         self.basicAuth = basicAuth
     }
-    
-    func getTrips(
-        onResponseSuccess: (json: NSDictionary) -> (),
-        onJSONParsingError: (jsonStr: String?) -> (),
-        onResponseFailure: (code: Int) -> ()
-    ) {
-        RequestHelper.get(
-            onResponseSuccess,
-            onJSONParsingError: onJSONParsingError,
-            onResponseFailure: onResponseFailure,
-            url: "http://localhost:8080/trips/",
-            headers: basicAuth.formHeader()
-        )
-    }
-    
-    func getEmail() -> String {
-        return basicAuth.username
-    }
-    
+
 }
