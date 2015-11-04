@@ -13,12 +13,11 @@ class ManagedUserModel {
     let user: UserModel
     
     class func getCurrentUser() -> ManagedUserModel? {
-        let users = DBManager.getUsers()
-        if users.count == 0 { return nil }
-        let firstuser = users[0]
-        let authString = firstuser.valueForKey("authstring") as! String
-        let basicAuth = BasicAuthString(authString: authString)
-        return ManagedUserModel(basicAuth: basicAuth)
+        if let authString = getUserAuthString() {
+            let basicAuth = BasicAuthString(authString: authString)
+            return ManagedUserModel(basicAuth: basicAuth)
+        }
+        return nil
     }
     
     class func create(
@@ -30,7 +29,7 @@ class ManagedUserModel {
     ) {
         UserModel.create(
             {(user: UserModel) in
-                DBManager.save(user)
+                setUserAuthString(user)
                 onSuccess(user: user)
             },
             onEmailTaken: onEmailTaken,
@@ -47,11 +46,30 @@ class ManagedUserModel {
         email: String,
         password: String
     ) {
-        
+        UserModel.login(
+            {(user: UserModel) in
+                setUserAuthString(user)
+                onSuccess(user: user)
+            },
+            onInvalidCredentials: onInvalidCredentials,
+            onUnknownError: onUnknownError,
+            email: email,
+            password: password
+        )
     }
     
     init(basicAuth: BasicAuthString) {
         user = UserModel(basicAuth: basicAuth)
+    }
+    
+    private class func getUserAuthString() -> String? {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        return defaults.stringForKey("userAuthString")
+    }
+    
+    private class func setUserAuthString(user: UserModel) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(user.basicAuth.getAuthString(), forKey: "userAuthString")
     }
     
 }

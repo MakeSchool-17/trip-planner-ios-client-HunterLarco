@@ -16,9 +16,6 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        let user = ManagedUserModel.getCurrentUser()
-        print(user)
-        
         loginForm.delegate = self
     }
     
@@ -60,7 +57,7 @@ extension LoginViewController: LoginViewDelegate {
     
     func doLogin(email: String, password: String) {
         loginForm.lockForm()
-        UserModel.login(onLoginSignupSuccess, onInvalidCredentials: onInvalidCredentials, onUnknownError: onUnknownError, email: email, password: password)
+        ManagedUserModel.login(onLoginSignupSuccess, onInvalidCredentials: onInvalidCredentials, onUnknownError: onUnknownError, email: email, password: password)
     }
     
     func doSignup(email: String, password: String) {
