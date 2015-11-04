@@ -29,6 +29,8 @@
 		AE878E001BE2B4170004882F /* TripsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE878DFF1BE2B4170004882F /* TripsView.xib */; };
 		AE8ECB901BE2E4120074798D /* TripsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE8ECB8F1BE2E4120074798D /* TripsTableViewCell.xib */; };
 		AED5D3CB1BE41156000C8130 /* TripsViewTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED5D3CA1BE41156000C8130 /* TripsViewTableCell.swift */; };
+		AEE892641BE9733500C65FD2 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE892631BE9733500C65FD2 /* DBManager.swift */; };
+		AEE892661BE98D3300C65FD2 /* ManagedUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE892651BE98D3300C65FD2 /* ManagedUserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		AE878DFF1BE2B4170004882F /* TripsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TripsView.xib; sourceTree = "<group>"; };
 		AE8ECB8F1BE2E4120074798D /* TripsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TripsTableViewCell.xib; sourceTree = "<group>"; };
 		AED5D3CA1BE41156000C8130 /* TripsViewTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsViewTableCell.swift; sourceTree = "<group>"; };
+		AEE892631BE9733500C65FD2 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		AEE892651BE98D3300C65FD2 /* ManagedUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedUserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,7 @@
 		AE4659CB1BE82F70007B2929 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AEE892651BE98D3300C65FD2 /* ManagedUserModel.swift */,
 				AE4659CC1BE82F7E007B2929 /* UserModel.swift */,
 				AE4659CE1BE82F89007B2929 /* TripModel.swift */,
 			);
@@ -164,6 +169,7 @@
 		AE7BD9761BE0966A001B005D /* TripPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				AEE892621BE9730D00C65FD2 /* Datastore */,
 				AE0AB4941BE95AC2001EDD2B /* LoginView */,
 				AE4659CB1BE82F70007B2929 /* Models */,
 				AE4659C81BE814A1007B2929 /* Networking */,
@@ -216,6 +222,14 @@
 				AED5D3CA1BE41156000C8130 /* TripsViewTableCell.swift */,
 			);
 			path = TripsView;
+			sourceTree = "<group>";
+		};
+		AEE892621BE9730D00C65FD2 /* Datastore */ = {
+			isa = PBXGroup;
+			children = (
+				AEE892631BE9733500C65FD2 /* DBManager.swift */,
+			);
+			path = Datastore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,6 +382,8 @@
 				AE0AB4961BE95ACB001EDD2B /* LoginView.swift in Sources */,
 				AE878DFA1BE2B2A30004882F /* AddTripView.swift in Sources */,
 				AE4659DA1BE93AA2007B2929 /* LoginViewController.swift in Sources */,
+				AEE892641BE9733500C65FD2 /* DBManager.swift in Sources */,
+				AEE892661BE98D3300C65FD2 /* ManagedUserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

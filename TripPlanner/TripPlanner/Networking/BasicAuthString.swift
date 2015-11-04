@@ -19,6 +19,15 @@ class BasicAuthString {
         self.password = password
     }
     
+    init (authString: String) {
+        let base64 = authString.characters.split{$0 == " "}.map(String.init)[1]
+        let decodedData = NSData(base64EncodedString: base64, options: NSDataBase64DecodingOptions(rawValue: 0))
+        let decodedString = NSString(data: decodedData!, encoding: NSUTF8StringEncoding)
+        let userpass = (decodedString as! String).characters.split{$0 == ":"}.map(String.init)
+        username = userpass[0]
+        password = userpass[1]
+    }
+    
     func getAuthString() -> String {
         let userPasswordString = "\(username):\(password)"
         let userPasswordData = userPasswordString.dataUsingEncoding(NSUTF8StringEncoding)

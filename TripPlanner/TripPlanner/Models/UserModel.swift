@@ -10,7 +10,7 @@ import Foundation
 
 class UserModel {
     
-    private let basicAuth: BasicAuthString
+    let basicAuth: BasicAuthString
     
     class func create(
         onSuccess: (user: UserModel) -> Void,
