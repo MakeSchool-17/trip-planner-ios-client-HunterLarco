@@ -63,13 +63,37 @@ class TripsView: UIView {
         return view
     }
     
-    let list = ["test1", "test2", "test3"]
+    func updateTripsFromCoreData() {
+        let currentUser = ManagedUserModel.getCurrentUser()!.user
+        self.trips = ManagedTripModel.getTripsFromCoreData(currentUser)
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.tableView.reloadData()
+        })
+    }
+    
+    func updateTripsFromServer(){
+        let currentUser = ManagedUserModel.getCurrentUser()!.user
+        ManagedTripModel.getTripsFromServer(onSuccess, onUnknownError: onUnknownError, author: currentUser)
+    }
+    
+    func onSuccess(trips: [TripModel]){
+        self.trips = trips
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.tableView.reloadData()
+        })
+    }
+    
+    func onUnknownError(){
+        
+    }
+    
+    var trips = [TripModel]()
     let textCellIdentifier = "TextCell"
 }
 
 extension TripsView: UITableViewDelegate {
-    
-    
     
 }
 
@@ -80,21 +104,21 @@ extension TripsView: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
+        return trips.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as! TripsTableViewCell
         
         let row = indexPath.row
-        cell.label.text = list[row]
+        cell.label.text = trips[row].name
         
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print(indexPath)
-        delegate?.doViewTrip(TripModel())
+//        delegate?.doViewTrip(TripModel())
     }
     
 }

@@ -12,8 +12,18 @@ class TripsViewController: UIViewController {
     
     @IBOutlet weak var tripsView: TripsView!
     
+    private var hasFetchedFromServer = false
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        if hasFetchedFromServer {
+            tripsView.updateTripsFromCoreData()
+        } else {
+            hasFetchedFromServer = true
+            tripsView.updateTripsFromCoreData()
+            tripsView.updateTripsFromServer()
+        }
         
         tripsView.delegate = self
     }

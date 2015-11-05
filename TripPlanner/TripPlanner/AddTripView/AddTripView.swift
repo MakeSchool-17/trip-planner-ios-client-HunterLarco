@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol TripViewDelegate {
+protocol AddTripViewDelegate {
     
     func formSubmitted(tripView: AddTripView, text: String)
     func formCanceled()
@@ -23,7 +23,7 @@ class AddTripView: UIView {
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var centeredViewConstraint: NSLayoutConstraint!
     
-    var delegate: TripViewDelegate?
+    var delegate: AddTripViewDelegate?
     
     var view: UIView!
     

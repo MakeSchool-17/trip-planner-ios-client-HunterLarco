@@ -18,24 +18,29 @@ class AddTripViewController: UIViewController {
         tripForm.delegate = self
     }
     
+    private func showAlert(message: String, title: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        
+        dispatch_async(dispatch_get_main_queue(),{
+            self.presentViewController(alertController, animated: true, completion: nil)
+        })
+    }
+    
 }
 
-extension AddTripViewController: TripViewDelegate {
+extension AddTripViewController: AddTripViewDelegate {
     
     func formSubmitted(tripView: AddTripView, text: String) {
+        ManagedTripModel.create(onTripCreated, onUnknownError: onUnknownError, author: ManagedUserModel.getCurrentUser()!.user, name: text)
+    }
+    
+    private func onTripCreated(trip: TripModel){
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func onTripsResponse(json: NSDictionary) {
-        print("trips recieved")
-    }
-    
-    func onJSONParsingError(jsonStr: String?) {
-        print("json parsing error: \(jsonStr)")
-    }
-    
-    func onTripsFailure(code: Int) {
-        print("grab trips error")
+    func onUnknownError() {
+        showAlert("Oh No! We're sorry, an unknown error occured. Please try whatever you were doing again.", title: "Unknown Error")
     }
     
     func formCanceled(){

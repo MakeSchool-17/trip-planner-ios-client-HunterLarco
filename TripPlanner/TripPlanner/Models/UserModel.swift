@@ -31,7 +31,7 @@ class UserModel {
             },
             onUnknownError: onUnknownError,
             errorMap: [409: onEmailTaken],
-            url: "http://localhost:8080/users/",
+            url: "http://10.0.1.68:8080/users/",
             body: body,
             headers: nil
         )
@@ -52,7 +52,7 @@ class UserModel {
             },
             onUnknownError: onUnknownError,
             errorMap: [401: onInvalidCredentials],
-            url: "http://localhost:8080/users/",
+            url: "http://10.0.1.68:8080/users/",
             headers: BasicAuthString(username: email, password: password).formHeader()
         )
     }

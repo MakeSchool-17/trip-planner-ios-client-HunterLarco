@@ -32,6 +32,7 @@
 		AEE892641BE9733500C65FD2 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE892631BE9733500C65FD2 /* DBManager.swift */; };
 		AEE892661BE98D3300C65FD2 /* ManagedUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE892651BE98D3300C65FD2 /* ManagedUserModel.swift */; };
 		AEE892681BEAA10000C65FD2 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE892671BEAA10000C65FD2 /* TripsViewController.swift */; };
+		AEE8926F1BEAFB6D00C65FD2 /* ManagedTripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE8926E1BEAFB6D00C65FD2 /* ManagedTripModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		AEE892631BE9733500C65FD2 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		AEE892651BE98D3300C65FD2 /* ManagedUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedUserModel.swift; sourceTree = "<group>"; };
 		AEE892671BEAA10000C65FD2 /* TripsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
+		AEE8926E1BEAFB6D00C65FD2 /* ManagedTripModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedTripModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +115,8 @@
 		AE0AB4941BE95AC2001EDD2B /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
-				AE0AB4951BE95ACB001EDD2B /* LoginView.swift */,
 				AE0AB4971BE95AD1001EDD2B /* LoginView.xib */,
+				AE0AB4951BE95ACB001EDD2B /* LoginView.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -135,6 +137,7 @@
 				AEE892651BE98D3300C65FD2 /* ManagedUserModel.swift */,
 				AE4659CC1BE82F7E007B2929 /* UserModel.swift */,
 				AE4659CE1BE82F89007B2929 /* TripModel.swift */,
+				AEE8926E1BEAFB6D00C65FD2 /* ManagedTripModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -219,8 +222,8 @@
 		AE878DFC1BE2B2B60004882F /* TripsView */ = {
 			isa = PBXGroup;
 			children = (
-				AE878DFD1BE2B3E40004882F /* TripsView.swift */,
 				AE878DFF1BE2B4170004882F /* TripsView.xib */,
+				AE878DFD1BE2B3E40004882F /* TripsView.swift */,
 				AE8ECB8F1BE2E4120074798D /* TripsTableViewCell.xib */,
 				AED5D3CA1BE41156000C8130 /* TripsTableViewCell.swift */,
 			);
@@ -372,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE8926F1BEAFB6D00C65FD2 /* ManagedTripModel.swift in Sources */,
 				AE0AB4931BE94CA1001EDD2B /* RequestErrorManager.swift in Sources */,
 				AE4659D11BE8336F007B2929 /* BasicAuthString.swift in Sources */,
 				AE878DFE1BE2B3E40004882F /* TripsView.swift in Sources */,

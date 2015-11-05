@@ -13,7 +13,7 @@ class RequestErrorManager {
     class func post(
         onSuccess: (json: NSDictionary) -> Void,
         onUnknownError: () -> Void,
-        errorMap: Dictionary<Int, () -> ()>,
+        errorMap: Dictionary<Int, () -> ()>?,
         url: String,
         body: Dictionary<String, String>?,
         headers: Dictionary<String, String>?
@@ -22,7 +22,7 @@ class RequestErrorManager {
             onSuccess,
             onJSONParsingError: {(jsonStr: String?) in onUnknownError()},
             onResponseFailure: {(code: Int) in
-                if let val = errorMap[code] {
+                if let errorMap = errorMap, let val = errorMap[code] {
                     val()
                     return
                 }
@@ -37,7 +37,7 @@ class RequestErrorManager {
     class func get(
         onSuccess: (json: NSDictionary) -> Void,
         onUnknownError: () -> Void,
-        errorMap: Dictionary<Int, () -> ()>,
+        errorMap: Dictionary<Int, () -> ()>?,
         url: String,
         headers: Dictionary<String, String>?
     ){
@@ -45,7 +45,7 @@ class RequestErrorManager {
             onSuccess,
             onJSONParsingError: {(jsonStr: String?) in onUnknownError()},
             onResponseFailure: {(code: Int) in
-                if let val = errorMap[code] {
+                if let errorMap = errorMap, let val = errorMap[code] {
                     val()
                     return
                 }
